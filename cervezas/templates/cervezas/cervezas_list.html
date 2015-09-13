@@ -1,7 +1,9 @@
+{% load staticfiles %}
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-	<link rel="stylesheet" type="text/css" href="parri.css"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet"  href="{% static "css/cervezas_list.css" %}" >
 
 	<title>Parri - Beers</title>
 	
@@ -10,7 +12,7 @@
 	<div class = "nav">
 		<img class="imagen_logo" src="http://i.imgur.com/Fl68w7C.png"/>
 		<ul>
-			<li><a href="">About us</a></li>
+			<li><a href="/">About us</a></li>
 			<li><a href="">Beers</a></li>
 			<li><a href="">Services</a></li>
 			<li><a href="">Gallery</a></li>
@@ -48,36 +50,15 @@
 		<h1 style="color:white">Antares</h1>
 		<table>
 			<tr>
+				{% for cerveza in cervezas %}
 				<td>
 					<div class = "tipo_cerveza">
-						<img class="cerveza_foto" src="http://infokioscos.com.ar/wp-content/uploads22/Porr%C3%B3n-Belgian.jpg"/>
-						<h2>Blonde</h2>
-						<span></span>
+						<img class="cerveza_foto" src= "{{ cerveza.foto }}"/>
+						<h2>{{ cerveza.nombre }}</h2>
+						<span> {{ cerveza.descripcion }}</span>
 					</div>
 				</td>
-				<td>
-					<div class = "tipo_cerveza">
-						<img class="cerveza_foto" src="https://hazcerveza.com/images/stories/jreviews/906_CervezaAntaresKlsch_1301354021.jpg"/>
-						<h2>I. RA.</h2>
-						<span></span>
-					</div>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div class = "tipo_cerveza">
-						<img class="cerveza_foto" src="http://dixit.guiaoleo.com.ar/wp-content/uploads/2009/12/witbier.jpg"/>
-						<h2>Ale</h2>
-						<span></span>
-					</div>
-				</td>
-				<td>
-					<div class = "tipo_cerveza">
-						<img class="cerveza_foto" src="https://hazcerveza.com/images/stories/jreviews/911_CervezaAntaresImperialStout_1301425320.jpg"/>
-						<h2>Stout</h2>
-						<span></span>
-					</div>
-				</td>
+				{% endfor %}
 			</tr>
 		</table>
 	</div>
