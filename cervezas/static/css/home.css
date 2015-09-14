@@ -1,5 +1,4 @@
 /*Fonts*/
-@import url('http://fonts.googleapis.com/css?family=Kavoon');
 @import url(https://fonts.googleapis.com/css?family=Poiret+One);
 @import url(https://fonts.googleapis.com/css?family=Quicksand:300,400);
 /*Styles*/
@@ -48,14 +47,76 @@ body{
 	-webkit-text-decoration-line: 10px;
 }
 
+h2 {
+	color: white;
+	font-family: 'Poiret One', cursive;
+	font-size: 30px;
+	position: relative;
+	margin-top: 150px;
+	padding-left: 30%;
+	height: 30px;
+	width: 100%
+}
+
+.nosotros_descripcion {
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-top: 30px;
+	margin-left: 20%;
+	
+}
+
+
+.nosotros_descripcion span {
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+	width: 300px;
+	float: left;
+}
+
+.nosotros_descripcion hr {
+    clear:both;
+    border:none;
+  	border-top:2px dotted white;
+    margin-left: -20%;
+    margin-bottom: 5%;
+    width: 80%;
+}
+
+.nosotros_descripcion h1 {
+	float: none;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+}
+
+
+.nosotros_descripcion img{
+	padding-left: 30px;
+	padding-right: 30px;
+	float: left;
+	height: 250px;
+	width: 250px;
+	margin-bottom: 30px;
+	border-radius: 125px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
 
 .Contacto{
-	margin-top: 300px;
+	margin-top: 100px;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	height: 300px;
-	position: absolute;
+	position: relative;
 }
 
 .redes_sociales {
