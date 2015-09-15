@@ -1,0 +1,16 @@
+{% extends "cervezas/base.html" %}
+{% load staticfiles %}
+{% block head_css %}
+  <link rel="stylesheet" href="{% static "css/contacto.css" %}" >
+{% endblock head_css %}
+{% block content %}
+		<div class = "contacto">
+			<form>
+				<input type="text" name="nombre" placeholder= "Nombre y apellido"></input></br>
+				<input type="email" name="mail"placeholder= "juan@micorreo.com"></input></br>
+				<input type="number" name="telefono" placeholder= "15-5555-5555"></input></br>
+				<textarea type="text" name="notas" placeholder="Contanos en que podemos ayudarte."></textarea></br>
+				<button name="submit" value= "Enviar" tabindex = "5"> enviar </button>
+			</form>
+		</div>
+{% endblock content %}

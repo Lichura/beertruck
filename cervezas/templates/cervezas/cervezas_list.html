@@ -1,24 +1,6 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html lang="es">
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet"  href="{% static "css/cervezas_list.css" %}" >
+{% extends "cervezas/base.html" %}
 
-	<title>Parri - Beers</title>
-	
-</head>
-<body>
-	<div class = "nav">
-		<img class="imagen_logo" src="http://i.imgur.com/Fl68w7C.png"/>
-		<ul>
-			<li><a href="/">About us</a></li>
-			<li><a href="">Beers</a></li>
-			<li><a href="">Services</a></li>
-			<li><a href="">Gallery</a></li>
-			<li><a href="">Contact us</a></li>
-		</ul>
-	</div>
+{% block content %}
 	<div class = "Galeria_imagenesss">
 		<ul class="slider">
 			<li>
@@ -62,12 +44,4 @@
 			</tr>
 		</table>
 	</div>
-	<div class = "Contacto">
-		<img style="width: 150px;height:150px" src="http://i.imgur.com/Fl68w7C.png"/>
-		<p>Beer Craft truck<p>
-		<a href="www.Facebook.com"><img style="width:30px;height:30px" src="https://www.kennesaw.edu/images/global/social/facebook_round.png"/></a>
-		<a href="www.twitter.com"><img style="width:30px;height:30px" src="http://www.kompaworld.com/image/photopage/SocialMediaicons-round-TWITTER.png"/></a>
-		<a href="www.instagram.com"><img style="width: 30px;height:30px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Instagram_circle.svg/2000px-Instagram_circle.svg.png"/></a>
-	</div>
-</body>
-</html>
+{% endblock content %}

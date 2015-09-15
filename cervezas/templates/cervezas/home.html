@@ -1,24 +1,8 @@
-{% load staticfiles %}
-<!DOCTYPE html>
-<html>
-<head>
-	<link rel="stylesheet"  href="{% static "css/home.css" %}" >
+{% extends "cervezas/base.html" %}
 
-	<title>Parri - Beers</title>
-	
-</head>
-<body>
-	<div class = "nav">
-		<img class="imagen_logo" src="http://i.imgur.com/Fl68w7C.png"/>
-		<ul>
-			<li><a href="/">About us</a></li>
-			<li><a href="/cervezas">Beers</a></li>
-			<li><a href="">Services</a></li>
-			<li><a href="">Gallery</a></li>
-			<li><a href="">Contact us</a></li>
-		</ul>
-	</div>
-	<h2> About the craft beer truck </h2>
+{% block content %}
+	<div id="imagen_inicio"><img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/18/189/189863/vintage_logo_beer_inv-o.jpg?1411489338"/><div>
+	<h2> About THE CRAFT BEER TRUCK </h2>
 	<div class = "nosotros_descripcion">
 			<h1> Cosme Fulanito </h1>
 			<span style="text-align:right">
@@ -33,19 +17,5 @@
 			</span>
 			
 	</div>
-	<div class = "Contacto">
-		<img id = "logo_bottom" src="http://i.imgur.com/Fl68w7C.png"/>
-		<p>Beer Craft truck<p>
-			<div class = "telefono"><span></br>Llamanos al 2309840, beertruck@beertruck.com.ar</br>
-										  tenemos la mejor cerveza de Buenos Aires</br>
-										  conectate a nuestras redes sociales!</br></br></br><span></div>
-			<div class = "redes_sociales">
-				<li><a href="http://www.Facebook.com"><img src="https://www.kennesaw.edu/images/global/social/facebook_round.png"/></a>
-				<li><a href="http://www.twitter.com"><img src="http://www.kompaworld.com/image/photopage/SocialMediaicons-round-TWITTER.png"/></a>
-				<li><a href="http://www.instagram.com"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Instagram_circle.svg/2000px-Instagram_circle.svg.png"/></a>
-				<li><a href="http://www.pinterest.com"><img src="https://www.impactdesignhub.org/wp-content/themes/magazine/images/pinterest_gray.png"/></a>
-				<li><a href="http://www.whatsapp.com"><img src="http://www.iconsdb.com/icons/preview/gray/whatsapp-xxl.png"/><a/>
-			</div>	
-	</div>
-</body>
-</html>
+
+{% endblock content %}
