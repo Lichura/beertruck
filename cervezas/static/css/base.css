@@ -1,0 +1,73 @@
+body {
+	background-color: black;
+}
+
+nav {
+	top: 0;
+	left: 0;
+	height: 15%;
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+}
+
+nav li {
+	display: block;
+	float: left;
+	padding-left: 10%;
+}
+nav a {
+	color: white;
+	text-decoration: none;
+	font-size: 100%;
+}
+
+nav a:hover {
+	font-style: underline;
+}
+
+.imagen_logo {
+	width: 10%;
+	position: fixed;
+}
+
+footer {
+	width: 100%;
+	height: 40%;
+	left: 0;
+	color: white;
+	display: block
+	float: left;
+}
+
+footer span {
+	display: block;
+	width: 40%;
+	float: left;
+	color: white;
+	padding-left: 5%;
+	margin-top: 5%;
+	font-size: 1em;
+}
+
+footer ul {
+	width: 20%;
+	display: block;
+	float: left;
+}
+
+footer li {
+	display: block;
+	width: 20%;
+}
+
+
+footer img{
+	width: 90%;
+}
+
+#logo_bottom {
+	display: block;
+	width: 30%;
+	float: left;
+}

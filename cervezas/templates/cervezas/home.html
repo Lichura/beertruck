@@ -1,9 +1,26 @@
 {% extends "cervezas/base.html" %}
-
+{% load staticfiles %}
+{% block head_css %}
+  <link rel="stylesheet" href="{% static "css/home.css" %}" >
+{% endblock head_css %}
 {% block content %}
-	<div id="imagen_inicio"><img src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/18/189/189863/vintage_logo_beer_inv-o.jpg?1411489338"/><div>
-	<h2> About THE CRAFT BEER TRUCK </h2>
-	<div class = "nosotros_descripcion">
+	<img id="imagen_inicio" src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/18/189/189863/vintage_logo_beer_inv-o.jpg?1411489338"/>
+	<section id="frase_cervera"><h2>Frase cervecera, Parri se la sigue comiendo</h2></section>
+	<section id="Gallery">
+		<div class="slider" id ="slider">
+  			<div class="holder">
+   		 		<div class="slide" id="slide-0"></div>
+    			<div class="slide" id="slide-1"></div>
+    			<div class="slide" id="slide-2"></div>
+  			</div>
+ 		</div>
+ 		<div class="slider-nav">
+    		<a href="#slide-0" class="active"></a> 
+    		<a href="#slide-1"></a> 
+    		<a href="#slide-2"></a> 
+ 		</div>
+  	</section>
+  	<section id = "About">
 			<h1> Cosme Fulanito </h1>
 			<span style="text-align:right">
 				Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
@@ -14,8 +31,33 @@
 			<h1>Mr. Bean</h1>
 			<span>
 				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. 
-			</span>
-			
-	</div>
+			</span>		
+	</section>
+	<section id = "Beers">
+		<img class="marca_foto" src="http://s3-media3.fl.yelpcdn.com/bphoto/G-8lrglzRaWPOpIc4KyFMQ/348s.jpg"/>
+		<h1 style="color:white">Antares</h1>
+		<table>
+			<tr>
+				{% for cerveza in cervezas %}
+				<td>
+					<div class = "tipo_cerveza">
+						<img class="cerveza_foto" src= "{{ cerveza.foto }}"/>
+						<h2>{{ cerveza.nombre }}</h2>
+						<span> {{ cerveza.descripcion }}</span>
+					</div>
+				</td>
+				{% endfor %}
+			</tr>
+		</table>
+	</section>
+	<section id="Contact">
+			<form>
+				<input type="text" name="nombre" placeholder= "Nombre y apellido"></input></br>
+				<input type="email" name="mail"placeholder= "juan@micorreo.com"></input></br>
+				<input type="number" name="telefono" placeholder= "15-5555-5555"></input></br>
+				<textarea type="text" name="notas" placeholder="Contanos en que podemos ayudarte."></textarea></br>
+				<button name="submit" value= "Enviar" tabindex = "5"> enviar </button>
+			</form>
+	</section>
 
 {% endblock content %}

@@ -1,106 +1,93 @@
-/*Fonts*/
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
-@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400);
-@import url(https://fonts.googleapis.com/css?family=Lora);
-/*Styles*/
+@import url(https://fonts.googleapis.com/css?family=Cabin|Muli|Josefin+Sans);
 
-
-body{
-	background-color: black;
-}
-.nav{
-	top: 0px;
-	left:0px;
-	right:0px;
+#imagen_inicio {
 	width: 100%;
-	height: 100px;
-	padding-left: 30px;
-	background-color: black;
-	position: fixed;
-	z-index: 1000;	
-}
-.imagen_logo{
-	float:left;
-	height:100px;
-	width:100px;
-}
-.nav ul{
-	list-style-type: none;
-}
-.nav li{
-	float: left;
-	padding-left: 6%;
-}
-.nav a{
-	display: block;
-	color: white;
-	text-decoration: none;
-	font-family: 'Quicksand', sans-serif;
-	font-size: 20px;
+
 }
 
-.nav a:hover{
-	text-decoration: underline;
-	border-width: 0 0 2px;
-	border-style: solid;
-	bottom: 5px;
-	-webkit-text-decoration-color: white;
-	-webkit-text-decoration-line: 10px;
-}
-
-h2 {
-	color: white;
-	font-family: 'Lora', serif;
-	font-size: 50px;
-	position: relative;
-	margin-top: 0px;
-	padding-left: 20%;
-	height: 30px;
-	width: 100%
-}
-
-#imagen_inicio{
-	margin-left: -50px;
-	overflow: hidden;
-}
-
-.nosotros_descripcion {
-	display: block;
+#frase_cervera {
 	width: 100%;
-	position: relative;
+	height: 40%;
+	background-image: url("http://img10.deviantart.net/4068/i/2012/328/8/6/vintage_sky_by_moltain-d5lzjz9.jpg");
+	left: 0px;
+	right: 0px;
 	overflow: hidden;
-	margin-top: 0px;
-	margin-left: 20%;
+	opacity: 0.7;
 	
 }
 
+#Gallery {
+	width: 100%;
+	height: 500px;
+	position: relative;
+	overflow: hidden;
+}
 
-.nosotros_descripcion span {
+.slider {
+ overflow-x: scroll;
+}
+
+.holder {
+  width: 300%;
+  height: 500px;
+}
+
+.slide {
+  float: left;
+  width: 100%;
+  height: 500px;
+}
+
+#slide-0 {
+  background-image: url("images/cervezas.jpg");
+}
+#slide-1 {
+  background-image: url("images/empty-road.jpg") ;
+}
+#slide-2 {
+  background-image: url("images/cervezas.jpg") ;
+  }
+
+.slide:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40%;
+	background: linear-gradient(transparent, black);
+}
+
+.slider-nav {
+	text-align: center;	
+	z-index: -1;
+}
+
+.slider-nav a {
+	width: 10px;
+	height: 10px;
+	display: inline-block;
+	background: #ddd;
+	border-radius: 50%;
+}
+
+.slider-nav a.active {
+	background: white;
+}
+
+h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	color: black;
+	width: 100%;
+	text-align: center;
+	font-size: 2em;
+}
+
+#About {
 	color: white;
-	font-family: 'Quicksand', sans-serif;
-	font-size: 15px;
-	width: 300px;
-	float: left;
 }
 
-.nosotros_descripcion hr {
-    clear:both;
-    border:none;
-  	border-top:2px dotted white;
-    margin-left: -20%;
-    margin-bottom: 5%;
-    width: 80%;
-}
-
-.nosotros_descripcion h1 {
-	float: none;
-	color: white;
-	font-family: 'Quicksand', sans-serif;
-	font-size: 20px;
-}
-
-
-.nosotros_descripcion img{
+#About img{
 	padding-left: 30px;
 	padding-right: 30px;
 	float: left;
@@ -115,51 +102,31 @@ h2 {
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 }
 
-
-.Contacto{
-	background-color:black;
-	margin-top: 100px;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	height: 300px;
+#Contact{
+	background-color: black;
 	position: relative;
+	margin-top: 5%;
+	margin-bottom: 5%;
 }
 
-.redes_sociales {
-	float: left;
+#Contact form {
+	text-align: center;
+	left: 50%;
 	display: block;
-	padding-left: 30px;
 }
 
+#Contact input, textarea {
+	width: 30%;
+	height: 2em;
+	margin-top: 2%;
+}
 
-.redes_sociales li {
-	display: block;
- }
- 
- .redes_sociales img {
- 	width: 30px;
- 	height: 30px;
- }
- .telefono {
- 	border-collapse: separate;
- 	border-right: dotted 2px white;
-	border-style: dotted;
-	float: left;
-	padding-left: 30px;
-	padding-right: 30px;
- }
- .telefono span {
- 	display: block;
+#Contact button {
 	color: white;
-	font-family: 'Quicksand', sans-serif;
-	font-size: 20px;
- }
- 
- #logo_bottom {
- 	width: 200px;
- 	height: 200px;
- 	float: left;
- 	padding-left: 100px;
- }
- 
+	border: none;
+	background: none;
+	font-size: 1.5em;
+	font-family: monospace;
+	width: 30%;
+	margin-top: 2%;
+}

@@ -1,0 +1,165 @@
+/*Fonts*/
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://fonts.googleapis.com/css?family=Quicksand:300,400);
+@import url(https://fonts.googleapis.com/css?family=Lora);
+/*Styles*/
+
+
+body{
+	background-color: black;
+}
+.nav{
+	top: 0px;
+	left:0px;
+	right:0px;
+	width: 100%;
+	height: 100px;
+	padding-left: 30px;
+	background-color: black;
+	position: fixed;
+	z-index: 1000;	
+}
+.imagen_logo{
+	float:left;
+	height:100px;
+	width:100px;
+}
+.nav ul{
+	list-style-type: none;
+}
+.nav li{
+	float: left;
+	padding-left: 6%;
+}
+.nav a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+}
+
+.nav a:hover{
+	text-decoration: underline;
+	border-width: 0 0 2px;
+	border-style: solid;
+	bottom: 5px;
+	-webkit-text-decoration-color: white;
+	-webkit-text-decoration-line: 10px;
+}
+
+h2 {
+	color: white;
+	font-family: 'Lora', serif;
+	font-size: 50px;
+	position: relative;
+	margin-top: 0px;
+	padding-left: 20%;
+	height: 30px;
+	width: 100%
+}
+
+#imagen_inicio{
+	margin-left: -50px;
+	overflow: hidden;
+}
+
+.nosotros_descripcion {
+	display: block;
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+	margin-top: 0px;
+	margin-left: 20%;
+	
+}
+
+
+.nosotros_descripcion span {
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 15px;
+	width: 300px;
+	float: left;
+}
+
+.nosotros_descripcion hr {
+    clear:both;
+    border:none;
+  	border-top:2px dotted white;
+    margin-left: -20%;
+    margin-bottom: 5%;
+    width: 80%;
+}
+
+.nosotros_descripcion h1 {
+	float: none;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+}
+
+
+.nosotros_descripcion img{
+	padding-left: 30px;
+	padding-right: 30px;
+	float: left;
+	height: 250px;
+	width: 250px;
+	margin-bottom: 30px;
+	border-radius: 125px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+
+.Contacto{
+	background-color:black;
+	margin-top: 100px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 300px;
+	position: relative;
+}
+
+.redes_sociales {
+	float: left;
+	display: block;
+	padding-left: 30px;
+}
+
+
+.redes_sociales li {
+	display: block;
+ }
+ 
+ .redes_sociales img {
+ 	width: 30px;
+ 	height: 30px;
+ }
+ .telefono {
+ 	border-collapse: separate;
+ 	border-right: dotted 2px white;
+	border-style: dotted;
+	float: left;
+	padding-left: 30px;
+	padding-right: 30px;
+ }
+ .telefono span {
+ 	display: block;
+	color: white;
+	font-family: 'Quicksand', sans-serif;
+	font-size: 20px;
+ }
+ 
+ #logo_bottom {
+ 	width: 200px;
+ 	height: 200px;
+ 	float: left;
+ 	padding-left: 100px;
+ }
+ 
