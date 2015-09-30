@@ -87,9 +87,24 @@ h2 {
 	color: white;
 }
 
-#About img{
+.personas {
+	position: relative;
+	display: inline-block;
+	width: 80%;
+	left: 10%;
+}
+
+.personas span {
+	display: block;
+	float: left;
+	width: 50%;
+	left: 20%;
+}
+
+.personas img{
 	padding-left: 30px;
 	padding-right: 30px;
+	display: block;
 	float: left;
 	height: 250px;
 	width: 250px;
@@ -100,6 +115,44 @@ h2 {
 	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
 	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+}
+
+
+.personas h1{
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 2em;
+	text-align: center;
+}
+.cervezas {
+	display: block;
+	position: relative;
+}
+.cervezas h1 {
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+}
+.marca_foto {
+	position: relative;
+	display: block;
+	float: left;
+}
+.tipo_cerveza h2{
+	font-family: 'Josefin Sans', sans-serif;
+	color: white;
+	font-size: 1em;
+}
+.tipo_cerveza {
+	position: relative;
+	display: inline-block;
+	float: left;
+	color: white;
+	
+}
+.cerveza_foto {
+	display: block;
+	float: left;
+	width: 30px;
+	height: 70px;
 }
 
 #Contact{
