@@ -1,65 +1,103 @@
-{% extends "cervezas/base.html" %}
-{% load staticfiles %}
-{% block head_css %}
-  <link rel="stylesheet" href="{% static "css/home.css" %}" >
-{% endblock head_css %}
-{% block content %}
-	<img id="imagen_inicio" src="https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/18/189/189863/vintage_logo_beer_inv-o.jpg?1411489338"/>
-	<section id="frase_cervera"><h2>Frase cervecera, Parri se la sigue comiendo</h2></section>
-	<section id="Gallery">
-		<div class="slider" id ="slider">
-  			<div class="holder">
-   		 		<div class="slide" id="slide-0"></div>
-    			<div class="slide" id="slide-1"></div>
-    			<div class="slide" id="slide-2"></div>
-  			</div>
- 		</div>
- 		<div class="slider-nav">
-    		<a href="#slide-0" class="active"></a> 
-    		<a href="#slide-1"></a> 
-    		<a href="#slide-2"></a> 
- 		</div>
-  	</section>
-  	<section id = "About">
-  		<div class ="personas">
-			<h1> Cosme Fulanito </h1>
-			<span style="text-align:right">
-				Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum.
-			</span>
-		<img src="http://static.photo.net/attachments/bboard/00V/00VUHO-209361584.jpg"/>
-		</div>
-		<hr/>	
-		<div class="personas">	
-		<h1>Mr. Bean</h1>	
-		<img src="http://i477.photobucket.com/albums/rr132/batkarrett/Steves%20Crit/mrbean.png"/>
-			<span>
-				Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. 
-			</span>	
-		</div>	
-	</section>
-	<section id = "Beers">
-	{% for marca in marcas %}
-		<div class="cervezas">
-		<h1>{{marca.marca}}</h1>
-		<img class="marca_foto" src="http://s3-media3.fl.yelpcdn.com/bphoto/G-8lrglzRaWPOpIc4KyFMQ/348s.jpg"/>
-				{% for cerveza in cervezas %}
-					<div class = "tipo_cerveza">
-						<img class="cerveza_foto" src= "{{ cerveza.foto }}"/>
-						<h2>{{ cerveza.nombre }}</h2>
-						<span> {{ cerveza.descripcion }}</span>
-					</div>
-				{% endfor %}
-		</div>
-		{% endfor %}
-	</section>
-	<section id="Contact">
-			<form>
-				<input type="text" name="nombre" placeholder= "Nombre y apellido"></input></br>
-				<input type="email" name="mail"placeholder= "juan@micorreo.com"></input></br>
-				<input type="number" name="telefono" placeholder= "15-5555-5555"></input></br>
-				<textarea type="text" name="notas" placeholder="Contanos en que podemos ayudarte."></textarea></br>
-				<button name="submit" value= "Enviar" tabindex = "5"> enviar </button>
-			</form>
-	</section>
 
-{% endblock content %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang='es'>
+<head>
+	<meta charset='utf-8'/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet"  href="{% static "css/home.css" %}" />
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<title>Parri - Beers</title>	
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash;
+	    var $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+});
+	</script>
+</head>
+<body>
+	<header>
+		<nav class="fixed-nav-bar">
+		<img src="http://i.imgur.com/Fl68w7C.png" alt="beertruck logo"/>
+		<ul>
+			<li><a href="#About">About Us</a></li>
+			<li><a href="#Gallery">Gallery</a></li>
+			<li><a href="#Services">Services</a></li>
+			<li><a href="#Beers">Beers</a></li>
+			<li><a href="#Clientes">Clientes</a></li>
+			<li><a href="#Contact">Contact Us</a></li>
+		</ul>
+		</nav>
+	</header>
+	<div class="section" id="Top-image">
+		<i class="fa fa-chevron-up fa-2x"></i>
+	</div>
+	<div class="section" id="Frase">
+		<h1>Un lugar donde la cerveza fluye como las mujeres</h1>
+	</div>
+	<div class="section" id="About">
+		<h1>Acerca de nosotros</h1>
+		<div class="persona">
+			<h1>Ezequiel Parrilla</h1>
+			<img src="http://diferenciaentre.info/wp-content/uploads/2015/07/selfie.jpg" alt="Ezequiel Parrilla"/>
+			<p>Soy el parri, me gusta hacer cervezas y tambien me gusta liniers</p>
+		</div>
+		<div class="persona">
+			<h1>Cosme Fulanito</h1>
+			<img src="http://vignette3.wikia.nocookie.net/lossimpson/images/1/16/Guy_Incognito.png/revision/latest?cb=20100401233011&path-prefix=es" alt="Cosme Fulanito"/>
+			<p>Buenas noches señores. Molesto con una copilla por favorrr</p>
+		</div>
+		<div class="persona">
+			<h1>Mike Wazousky</h1>
+			<img src="http://img2.wikia.nocookie.net/__cb20131225010631/disney/images/1/1f/FMSTFIM15.png" alt="Mike wazousky"/>
+			<p>Soy tan romántico que a veces pienso que debería casarme conmigo mismo</p>
+		</div>
+		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+	</div>
+	<div class="section" id="Gallery">
+		<h1>Galeria de imagenes</h1>
+		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+	</div>
+  	<div class="section" id="Services"> 
+  		<h1>servicios</h1>
+  		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+  	</div>
+	<div class="section" id="Beers">
+		<h1>cervezas</h1>
+		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+	</div>
+	<div class="section" id="Clientes">
+		<h1>Clientes</h1>
+		<div class="clientes">
+			<img class="img-cliente" src="http://www.publicidadeuskadi.com/wp-content/uploads/2013/03/rollingstonestonguelogo.jpg" alt=""/>
+			<img class="img-cliente" src="http://design.ubuntu.com/wp-content/uploads/ubuntu-logo32.png" alt=""/>
+			<img class="img-cliente" src="https://upload.wikimedia.org/wikipedia/commons/3/33/Vanamo_Logo.png" alt=""/>
+			<img class="img-cliente" src="http://creativebits.org/files/500px-Apple_Computer_Logo.svg_.png" alt=""/>
+			<img class="img-cliente" src="https://openlab.citytech.cuny.edu/vshurigin-eportfolio/files/2013/11/Shell-Logo-Rebuilding-Iraq.jpg" alt=""/>
+			<img class="img-cliente" src="http://pmm.nasa.gov/sites/default/files/NASA-Logo-Large.jpg" alt=""/>
+			<img class="img-cliente" src="http://logonoid.com/images/yamaha-logo.jpg" alt=""/>		
+			<img class="img-cliente" src="http://cartype.com/pics/124/full/bmw_logo_79.jpg" alt=""/>		
+			<img class="img-cliente" src="http://www.abondance.com/Bin/ghostbusters-logo.jpg" alt=""/>
+			<img class="img-cliente" src="http://3.bp.blogspot.com/-Sg6hirn-jI8/VB2yDboufyI/AAAAAAAAAW8/AcQBu9rtU_0/s1600/Barcelona%2BLogo%2B%2B(5).jpg" alt=""/>
+			<img class="img-cliente" src="http://www.bonamyfinch.com/wp-content/uploads/2014/07/logo_adidas.png" alt=""/>
+			<img class="img-cliente" src="http://www.omicrono.com/wp-content/uploads/2014/04/Original_IBM_Logo.png" alt=""/>
+		</div>
+		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+	</div>
+	<div class="section" id="Contact"> 
+		<h1> Beer truck bla bla bla</h1>
+	</div>
+</body>
+</html>

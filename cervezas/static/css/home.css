@@ -1,185 +1,173 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin|Muli|Josefin+Sans);
-
-#imagen_inicio {
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+html,
+body {
 	width: 100%;
-
-}
-
-#frase_cervera {
-	width: 100%;
-	height: 40%;
-	background-image: url("http://img10.deviantart.net/4068/i/2012/328/8/6/vintage_sky_by_moltain-d5lzjz9.jpg");
-	left: 0px;
-	right: 0px;
-	overflow: hidden;
-	opacity: 0.7;
-	
-}
-
-#Gallery {
-	width: 100%;
-	height: 500px;
-	position: relative;
-	overflow: hidden;
-}
-
-.slider {
- overflow-x: scroll;
-}
-
-.holder {
-  width: 300%;
-  height: 500px;
-}
-
-.slide {
-  float: left;
-  width: 100%;
-  height: 500px;
-}
-
-#slide-0 {
-  background-image: url("images/cervezas.jpg");
-}
-#slide-1 {
-  background-image: url("images/empty-road.jpg") ;
-}
-#slide-2 {
-  background-image: url("images/cervezas.jpg") ;
-  }
-
-.slide:before {
-	content: "";
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 40%;
-	background: linear-gradient(transparent, black);
-}
-
-.slider-nav {
-	text-align: center;	
-	z-index: -1;
-}
-
-.slider-nav a {
-	width: 10px;
-	height: 10px;
-	display: inline-block;
-	background: #ddd;
-	border-radius: 50%;
-}
-
-.slider-nav a.active {
-	background: white;
-}
-
-h2 {
-	font-family: 'Josefin Sans', sans-serif;
-	color: black;
-	width: 100%;
-	text-align: center;
-	font-size: 2em;
-}
-
-#About {
-	color: white;
-}
-
-.personas {
-	position: relative;
-	display: inline-block;
-	width: 80%;
-	left: 10%;
-}
-
-.personas span {
-	display: block;
-	float: left;
-	width: 50%;
-	left: 20%;
-}
-
-.personas img{
-	padding-left: 30px;
-	padding-right: 30px;
-	display: block;
-	float: left;
-	height: 250px;
-	width: 250px;
-	margin-bottom: 30px;
-	border-radius: 125px;
-	-webkit-border-radius: 150px;
-	-moz-border-radius: 150px;
-	box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-webkit-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
-	-moz-box-shadow: 0 0 8px rgba(0, 0, 0, .8);
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background: black;
 }
 
 
-.personas h1{
-	font-family: 'Josefin Sans', sans-serif;
-	font-size: 2em;
-	text-align: center;
-}
-.cervezas {
-	display: block;
-	position: relative;
-}
-.cervezas h1 {
-	font-family: 'Josefin Sans', sans-serif;
-	color: white;
-}
-.marca_foto {
-	position: relative;
-	display: block;
-	float: left;
-}
-.tipo_cerveza h2{
-	font-family: 'Josefin Sans', sans-serif;
-	color: white;
-	font-size: 1em;
-}
-.tipo_cerveza {
-	position: relative;
-	display: inline-block;
-	float: left;
-	color: white;
-	
-}
-.cerveza_foto {
-	display: block;
-	float: left;
-	width: 30px;
-	height: 70px;
+.section {
+	box-sizing: border-box;
+	top: 0 0 -15vh 0;
+    width: 100%;
+    position: relative;
+    float: left;
 }
 
-#Contact{
+.section:nth-of-type(1) {
+	height:100vh;
+	line-height: 100vh;
+	background: url("https://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/18/189/189863/vintage_logo_beer_inv-o.jpg?1411489338");
+	background-size: cover;
+}
+.section:nth-of-type(2) {
+	height: 20vh;
+	line-height: 20vh;
 	background-color: black;
-	position: relative;
-	margin-top: 5%;
-	margin-bottom: 5%;
+}
+.section:nth-of-type(3) {
+	height: 100vh;
+	background: #e74c3f;
+}
+.section:nth-of-type(4) {
+	height:100vh;
+	line-height: 100vh;
+	background:#1abc9c;;
+}
+.section:nth-of-type(5) {
+	height:100vh;
+	line-height: 100vh;
+	background: #e74c35;
+}
+.section:nth-of-type(6) {
+	height:100vh;
+	line-height: 100vh;
+	background: #e10c35;
+}
+.section:nth-of-type(7) {
+	height:100vh;
+	background: black;
+}
+.section:nth-of-type(8) {
+	height:20vh;
+	line-height: 20vh;
+	background: black;
+}
+.section i {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  color: #fff;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -16px;
 }
 
-#Contact form {
-	text-align: center;
-	left: 50%;
+h1 {
+	font-family: 'Roboto Slab', serif;
+	font-size: 2em;
+	color: white;
+	text-align: center;	
+}
+
+.fixed-nav-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 15vh;
+  line-height: 15vh;
+  background-color: black;
+  text-align: center;
+}
+.fixed-nav-bar img{
+	left: 1%;
+	top: 20%;
+	height: 10vh;
+	position: relative;
+	float: left;
+	display: block;
+}
+.fixed-nav-bar ul {
+	width: 100%;
+	margin: 0;
+}
+.fixed-nav-bar ul li {
+	list-style-type: none;
+	display: inline-block;
+	width: 10%;
+}
+.fixed-nav-bar ul li:hover {
+	background-color:gray;
+	line-height: 10hv;	
+}
+
+.fixed-nav-bar ul li:active {
+	background-color: white;
+	color: black;
+}
+.fixed-nav-bar ul li a {
+	text-decoration: none;
+	font-family:'Roboto Slab', serif ;
+	font-size: 1em;
+	display: block;
+	width: 100%;
+	color: white;
+	
+}
+
+.persona {
+	position: relative;
+	height: 60vh;
+	width: 33%;
+	float: left;
 	display: block;
 }
 
-#Contact input, textarea {
-	width: 30%;
-	height: 2em;
-	margin-top: 2%;
+.persona h1{
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
 }
 
-#Contact button {
+.persona img {
+	width: 50%;
+	border-radius: 50%;
+	margin: 0 0 0 10%;
+	padding: 0 0 0 10%;
+	
+}
+
+.persona p{
 	color: white;
-	border: none;
+	font-family:'Roboto Slab', serif ;
+	font-size: 1em;
+	text-align: center;
+	margin: 0 0 0 10%;
+	padding: 0 0 0 10%;
+	width: 50%;
+}
+
+.clientes {
+	width: 100%;
+	height: 60vh;
+	background-color: #e15c35;
+}
+.img-cliente {
+	position: relative;
+	border-radius: 10%;
 	background: none;
-	font-size: 1.5em;
-	font-family: monospace;
-	width: 30%;
-	margin-top: 2%;
+	width: 60px;
+	height: 60px;
+	margin-left: auto;
+	margin-right: auto;
+	float: none;
+	display: inline-block;
+	margin: 5%;
+	border: 2px solid black;
 }
