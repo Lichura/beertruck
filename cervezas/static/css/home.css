@@ -53,8 +53,7 @@ body {
 	background: black;
 }
 .section:nth-of-type(8) {
-	height:20vh;
-	line-height: 20vh;
+	height:100vh;
 	background: black;
 }
 .section i {
@@ -107,10 +106,6 @@ h1 {
 	line-height: 10hv;	
 }
 
-.fixed-nav-bar ul li:active {
-	background-color: white;
-	color: black;
-}
 .fixed-nav-bar ul li a {
 	text-decoration: none;
 	font-family:'Roboto Slab', serif ;
@@ -171,3 +166,38 @@ h1 {
 	margin: 5%;
 	border: 2px solid black;
 }
+
+#Contact input {
+	display: block;
+	margin: 0 30% 2% 30%;
+	height: 5vh;
+	width: 40%;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1em;
+	color: black;
+	text-align: center;	 
+}
+
+#Contact input[type="textarea"]{
+	height: 10vh;
+}
+
+#Contact input:focus {
+	border: solid 2px orange;
+}
+
+#Contact button {
+	display: block;
+	background: none;
+	border: none;
+	height: 5vh;
+	width: 40%;
+	text-align: center;
+	color: white;
+	font-size: 1.5em;
+	margin: 0 30% 0 30%;
+	font-family: 'Roboto Slab', serif;
+}
+
+
+
