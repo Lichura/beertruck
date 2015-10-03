@@ -41,8 +41,77 @@
 		</ul>
 		</nav>
 	</header>
-	<div class="section" id="Top-image">
-		<i class="fa fa-chevron-up fa-2x"></i>
+	<div class="section" id="Gallery">
+		<ul class="slides">
+  			<input type="radio" name="radio-btn" id="img-1" checked />
+  			<li class="slide-container">
+   				<div class="slide">
+    			    <img src="https://farm9.staticflickr.com/8067/8274414457_fee4133e99_b.jpg"/>
+    			</div>
+    			<div class="nav">
+      				<label for="img-6" class="prev">&#x2039;</label>
+      				<label for="img-2" class="next">&#x203a;</label>
+    			</div>
+  			</li>
+  			<input type="radio" name="radio-btn" id="img-2" />
+  				<li class="slide-container">
+    				<div class="slide">
+      					<img src="https://farm7.staticflickr.com/6139/5966806905_df7884b06d_b.jpg"/>
+    				</div>
+    				<div class="nav">
+      					<label for="img-1" class="prev">&#x2039;</label>
+      					<label for="img-3" class="next">&#x203a;</label>
+    				</div>
+  				</li>
+  			<input type="radio" name="radio-btn" id="img-3" />
+  				<li class="slide-container">
+    				<div class="slide">
+      					<img src="https://farm7.staticflickr.com/6014/5911563079_3cee24de80_b.jpg"/>
+    				</div>
+    				<div class="nav">
+      					<label for="img-2" class="prev">&#x2039;</label>
+      					<label for="img-4" class="next">&#x203a;</label>
+    				</div>
+  				</li>
+  			<input type="radio" name="radio-btn" id="img-4" />
+  				<li class="slide-container">
+    				<div class="slide">
+      					<img src="https://farm3.staticflickr.com/2080/2382107779_de2acb2ffe_b.jpg"/>
+   					</div>
+    				<div class="nav">
+      					<label for="img-3" class="prev">&#x2039;</label>
+      					<label for="img-5" class="next">&#x203a;</label>
+    				</div>
+  				</li>
+  			<input type="radio" name="radio-btn" id="img-5" />
+  				<li class="slide-container">
+    				<div class="slide">
+      					<img src="https://farm8.staticflickr.com/7324/16482308902_390beb1160_k.jpg"/>
+    				</div>
+    				<div class="nav">
+     					<label for="img-4" class="prev">&#x2039;</label>
+      					<label for="img-6" class="next">&#x203a;</label>
+    				</div>
+  				</li>
+  			<input type="radio" name="radio-btn" id="img-6" />
+  				<li class="slide-container">
+    				<div class="slide">
+      					<img src="https://farm4.staticflickr.com/3788/18841758859_da276c3869_h.jpg"/>
+    				</div>
+    				<div class="nav">
+      					<label for="img-5" class="prev">&#x2039;</label>
+      					<label for="img-1" class="next">&#x203a;</label>
+    				</div>
+  				</li>
+  			<li class="nav-dots">
+    			<label for="img-1" class="nav-dot" id="img-dot-1"></label>
+    			<label for="img-2" class="nav-dot" id="img-dot-2"></label>
+    			<label for="img-3" class="nav-dot" id="img-dot-3"></label>
+    			<label for="img-4" class="nav-dot" id="img-dot-4"></label>
+    			<label for="img-5" class="nav-dot" id="img-dot-5"></label>
+    			<label for="img-6" class="nav-dot" id="img-dot-6"></label>
+  			</li>
+		</ul>		
 	</div>
 	<div class="section" id="Frase">
 		<h1>Un lugar donde la cerveza fluye como las mujeres</h1>
@@ -64,19 +133,73 @@
 			<img src="http://img2.wikia.nocookie.net/__cb20131225010631/disney/images/1/1f/FMSTFIM15.png" alt="Mike wazousky"/>
 			<p>Soy tan romántico que a veces pienso que debería casarme conmigo mismo</p>
 		</div>
-		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
-	</div>
-	<div class="section" id="Gallery">
-		<h1>Galeria de imagenes</h1>
-		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
   	<div class="section" id="Services"> 
   		<h1>servicios</h1>
-  		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+  		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
   	</div>
 	<div class="section" id="Beers">
-		<h1>cervezas</h1>
-		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+		<h1>Cervezas</h1>
+		<div class= "cervezas">
+			<div class="marca">
+				<h1>Miller</h1>
+				<img src="http://www.presidiacreative.com/wp-content/uploads/2011/07/miller_01.jpg"/>
+				<p>Miller. Cerveza de varios gustos.</p>
+			</div>
+			<div class="cervezas_container">
+				<div class="tipo_cerveza">
+					<h2>Miller Chill Lemon</h2>
+					<img src="{% static "css/images/miller1.png" %}"/>
+					<p>Light beer with a refreshing taste of lemon<p>
+				</div>
+				<div class="tipo_cerveza">
+					<h2>Miller Lite</h2>
+					<img src="{% static "css/images/miller2.png" %}"/>
+					<p>This carefully crafted pilsner uses the finest ingredients and brewing techniques to ensure rich, full-bodied beer taste at only 96 calories.<p>			
+				</div>
+				<div class="tipo_cerveza">
+					<h2>Miller High Life</h2>
+					<img src="{% static "css/images/miller3.png" %}"/>
+					<p>The low-cal version of Miller High Life.<p>			
+				</div>
+				<div class="tipo_cerveza">
+					<h2>Miller Genuine Draft</h2>
+					<img src="{% static "css/images/miller4.png" %}"/>
+					<p>Representing a true innovation in American brewing, MGD's patented cold-filtered process fashions the smooth drinkability of draft beer available in bottles and cans.<p>			
+				</div>
+			</div>
+		</div>
+		<div class= "cervezas">
+			<div class="marca">
+				<h1>Antares</h1>
+				<img src="http://s3-media3.fl.yelpcdn.com/bphoto/G-8lrglzRaWPOpIc4KyFMQ/348s.jpg"/>
+				<p>Antares - Cerveza artesanal Argentina</p>
+			</div>
+			<div class="cervezas_container">
+				<div class="tipo_cerveza">
+					<h2>Antares Porter</h2>
+					<img src="{% static "css/images/antares1.png" %}"/>
+					<p>Sabor y aroma tostado y cafe. Orientada hacia la malta con baja presencia del lupulo<p>
+				</div>
+				<div class="tipo_cerveza">
+					<h2>Antares Kolsh</h2>
+					<img src="{% static "css/images/antares2.png" %}"/>
+					<p>Sabor frutado y fresca en aroma, con un acabado seco del lúpulo al final.<p>			
+				</div>
+				<div class="tipo_cerveza">
+					<h2>Antares Barley Wine</h2>
+					<img src="{% static "css/images/antares3.png" %}"/>
+					<p>Fuerte, intensa y maltosa. Con un acento frutado proveniente de las levaduras<p>			
+				</div>
+				<div class="tipo_cerveza">
+					<h2>Antares Honey Beer</h2>
+					<img src="{% static "css/images/antares4.png" %}"/>
+					<p>Fresca cerveza con el agregado de la miel.<p>			
+				</div>
+			</div>
+		</div>
+		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
 	<div class="section" id="Clientes">
 		<h1>Clientes</h1>
@@ -94,7 +217,7 @@
 			<img class="img-cliente" src="http://www.bonamyfinch.com/wp-content/uploads/2014/07/logo_adidas.png" alt=""/>
 			<img class="img-cliente" src="http://www.omicrono.com/wp-content/uploads/2014/04/Original_IBM_Logo.png" alt=""/>
 		</div>
-		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
 	<div class="section" id="Contact"> 
 		<h1> Contacto </h1>
@@ -102,7 +225,7 @@
 		<input type="email" placeholder="Mail"></input>
 		<input type="textarea" placeholder="Comentarios"></input>
 		<button type="submit">enviar</button>
-		<a href="#Top-image"><i class="fa fa-chevron-up fa-2x"></i></a>
+		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
 </body>
 </html>
