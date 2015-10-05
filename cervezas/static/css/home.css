@@ -90,6 +90,14 @@ h1 {
 	#About {
 		height: 220vh;
 	}
+	
+	#Footer ul {
+	margin-left: 15%;
+	}
+	
+	#Footer ul li {
+	display: inline;
+	}
 }
 
 @media screen and (min-width: 600px) {
@@ -99,6 +107,10 @@ h1 {
     width: 33.33%;
     height: 60vh;
   }
+  
+  	#Footer ul {
+  		margin-left: 25%;
+  	}
 }
 
 
@@ -263,18 +275,16 @@ h1 {
 #Footer ul {
 	list-style-type: none;
 }
-#Footer ul li {
-	margin: 3% 0 0 0;
-}
+
 #Footer ul li a img{
-	width: 10%;
-	height: 10%;
+	width: 50px;
+	margin: 0 0 5% 0;
 }
 
-  	#Footer img{
-		width: 50%;
-		margin: 0 0 0 25%;
-	}
+#footer-logo {
+	width: 80%;
+	margin: 0 0 0 10%;
+}
 
 
 .slides {
