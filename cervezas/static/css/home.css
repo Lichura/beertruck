@@ -5,7 +5,6 @@ body {
 	width: 100%;
 	height: 100%;
 	margin: 0;
-	padding-top: 50px;
 	background: black;
 }
 
@@ -69,25 +68,54 @@ h1 {
 }
 
 
-.persona {
-	position: relative;
-	height: 60vh;
-	width: 33%;
-	float: left;
-	display: block;
+/* grid */
+.row {
+	margin: 0 -10px;
+	margin-bottom: 20px;
+}
+
+.row:last-child {
+	margin-bottom: 0;
+}
+[class*="col-"]{
+	padding: 10px;
+}
+
+@media all and ( min-width: 600px ) {
+
+
+
+
+  /* make the columns responsive */
+  [class*="col-1-3"]{
+    float: left;
+    width: 33.33%;
+    height: 60vh;
+  }
+  
+ } 
+ 
+.section:nth-of-type(2) h1{
+	color: white;
+	line-height: none;
+	font-size: 2em;
+} 
+.section:nth-of-type(3) {
+	height: 220vh;
 }
 
 .persona h1{
 	text-align: center;
 	color: white;
 	font-size: 1.5em;
+	margin: 2%;
 }
 
 .persona img {
 	width: 50%;
 	border-radius: 50%;
-	margin: 0 0 0 10%;
-	padding: 0 0 0 10%;
+	margin: 0 20% 0 25%;
+	padding: 5% 0 5% 0;
 	
 }
 
@@ -96,16 +124,17 @@ h1 {
 	font-family:'Roboto Slab', serif ;
 	font-size: 1em;
 	text-align: center;
-	margin: 0 0 0 10%;
-	padding: 0 0 0 10%;
+	margin: 0 0 0 25%;
 	width: 50%;
 }
+
+
+/*------------Clientes----------------*/
 
 .clientes {
 	position: absolute;
 	width: 100%;
 	height: 60vh;
-	background-color: #313131;
 }
 .img-cliente {
 	position: relative;
@@ -153,6 +182,9 @@ h1 {
 	font-family: 'Roboto Slab', serif;
 }
 
+
+
+/*----------Cervezas------------------*/
 .cervezas {
 	position: relative;
 	width: 100%
@@ -161,7 +193,6 @@ h1 {
 	right: 0;
 	padding: 5% 0 10% 0;
 	margin-top: 3%;
-	background: #151515;
 	}
 .marca {
 	position: relative;
@@ -224,36 +255,29 @@ h1 {
 	text-align: center;
 }
 
-#Footer img {
-	width: 30%;
-	position: absolute;
-	left: 1%;
-}
 
 #Footer h1 {
-	width: 50%;
-	position: absolute;
-	left: 30%;
-	top: 10%;
-	font-size: 1em;
 	text-align: center;
-	line-height: 2em;
+	color: white;
+	margin: 0 5% 0 5%;
+	font-size: 1em;
 }
-
 #Footer ul {
-	position: absolute;
-	left: 80%;
-	top: 1%;
-	right: 0;
-
+	list-style-type: none;
+}
+#Footer ul li {
+	margin: 3% 0 0 0;
+}
+#Footer ul li a img{
+	width: 10%;
+	height: 10%;
 }
 
-#Footer ul li{
-	position: relative;
-	width: 100%;
-	height: 100%;
-	padding-bottom: 20%;
-}
+  	#Footer img{
+		width: 50%;
+		margin: 0 0 0 25%;
+	}
+
 
 .slides {
   padding: 0;
