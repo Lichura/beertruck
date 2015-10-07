@@ -2,17 +2,19 @@
 {% load staticfiles %}
 <!DOCTYPE html>
 <html lang='es'>
+<html class="no-js">
 <head>
 	<meta charset='utf-8'/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet"  href="{% static "css/home.css" %}" />
-	  	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
-	<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+	  
+	  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<title>Parri - Beers</title>	
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-
+	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/%s/modernizr.min.js"></script>
 	<script>
 	$(document).ready(function(){
 	$('a[href^="#"]').on('click',function (e) {
@@ -27,8 +29,21 @@
 	        window.location.hash = target;
 	    });
 	});
+	
+
+        // handle the mouseenter functionality
+        $(".img").mouseenter(function(){
+            $(this).addClass("hover");
+        })
+        // handle the mouseleave functionality
+        .mouseleave(function(){
+            $(this).removeClass("hover");
+        });	
 });
+
+
 	</script>
+	
 </head>
 <body>
 	<header>
@@ -158,63 +173,108 @@
   	</div>
 	<div class="section" id="Beers">
 		<h1>Cervezas</h1>
-		<div class= "cervezas">
-			<div class="marca">
-				<h1>Miller</h1>
+		<div id="effect-1" class="effects clearfix">
+		
+		<div class="row-1">
+			<div class="img">
 				<img src="http://www.presidiacreative.com/wp-content/uploads/2011/07/miller_01.jpg"/>
-				<p>Miller. Cerveza de varios gustos.</p>
-			</div>
-			<div class="cervezas_container">
-				<div class="tipo_cerveza">
-					<h2>Miller Chill Lemon</h2>
-					<img src="{% static "css/images/miller1.png" %}"/>
-					<p>Light beer with a refreshing taste of lemon</p>
-				</div>
-				<div class="tipo_cerveza">
-					<h2>Miller Lite</h2>
-					<img src="{% static "css/images/miller2.png" %}"/>
-					<p>This carefully crafted pilsner uses the finest ingredients and brewing techniques to ensure rich, full-bodied beer taste at only 96 calories.</p>			
-				</div>
-				<div class="tipo_cerveza">
-					<h2>Miller High Life</h2>
-					<img src="{% static "css/images/miller3.png" %}"/>
-					<p>The low-cal version of Miller High Life.</p>			
-				</div>
-				<div class="tipo_cerveza">
-					<h2>Miller Genuine Draft</h2>
-					<img src="{% static "css/images/miller4.png" %}"/>
-					<p>Representing a true innovation in American brewing, MGD's patented cold-filtered process fashions the smooth drinkability of draft beer available in bottles and cans.</p>			
+				<div class="overlay">
+				<a href="#" class="expand">
+				<ul>
+					<li>Coors Banquet</li>
+					<li>Coors Light</li>
+					<li>Coors Light Citrus Radler</li>
+					<li>Extra Gold Lager</li>
+					<li>Hamm's</li>
+					<li>Icehouse</li>
+					<li>Keystone Ice</li>
+					<li>Magnum</li>
+				<ul>
+				</a>
+				<a class="close-overlay hidden">x</a>
 				</div>
 			</div>
-		</div>
-		<div class= "cervezas">
-			<div class="marca">
-				<h1>Antares</h1>
+			
+			<div class="img">
 				<img src="http://s3-media3.fl.yelpcdn.com/bphoto/G-8lrglzRaWPOpIc4KyFMQ/348s.jpg"/>
-				<p>Antares - Cerveza artesanal Argentina</p>
-			</div>
-			<div class="cervezas_container">
-				<div class="tipo_cerveza">
-					<h2>Antares Porter</h2>
-					<img src="{% static "css/images/antares1.png" %}"/>
-					<p>Sabor y aroma tostado y cafe. Orientada hacia la malta con baja presencia del lupulo</p>
-				</div>
-				<div class="tipo_cerveza">
-					<h2>Antares Kolsh</h2>
-					<img src="{% static "css/images/antares2.png" %}"/>
-					<p>Sabor frutado y fresca en aroma, con un acabado seco del lúpulo al final.</p>			
-				</div>
-				<div class="tipo_cerveza">
-					<h2>Antares Barley Wine</h2>
-					<img src="{% static "css/images/antares3.png" %}"/>
-					<p>Fuerte, intensa y maltosa. Con un acento frutado proveniente de las levaduras</p>			
-				</div>
-				<div class="tipo_cerveza">
-					<h2>Antares Honey Beer</h2>
-					<img src="{% static "css/images/antares4.png" %}"/>
-					<p>Fresca cerveza con el agregado de la miel.</p>			
+				<div class="overlay">
+				<a href="#" class="expand">
+				<ul>
+					<li>Kolsch</li>
+					<li>Scotch</li>
+					<li>Porter</li>
+					<li>Barley Wine</li>
+					<li>Imperial Stout</li>
+					<li>Honey Beer</li>
+				<ul>
+				</a>
+				<a class="close-overlay hidden">x</a>
 				</div>
 			</div>
+			
+			<div class="img">
+				<img src="http://www.wolvesheadpizza.com/wp-content/uploads/2014/05/Heineken-Brand.png"/>
+				<div class="overlay">
+				<a href="#" class="expand"><p>Heineken papaaaaaaa</p></a>
+				<a class="close-overlay hidden">x</a>
+				</div>
+			</div>
+			
+			<div class="img">
+				<img src="http://thecasualpint.com/old/images/logo.png"/>
+				<div class="overlay">
+				<a href="#" class="expand"><p>Otra cerveza mas con un logo que la rompee</p></a>
+				<a class="close-overlay hidden">x</a>
+				</div>
+			</div>
+		</div>	
+		
+		
+		<div class="row-2">
+			<div class="img">
+				<img src="http://beerpulse.com/wp-content/uploads/2011/09/Amstel-Beer-Logo.png"/>
+				<div class="overlay">
+				<a href="#" class="expand">
+				<ul>
+					<li>Coors Banquet</li>
+					<li>Coors Light</li>
+					<li>Coors Light Citrus Radler</li>
+					<li>Extra Gold Lager</li>
+					<li>Hamm's</li>
+					<li>Icehouse</li>
+					<li>Keystone Ice</li>
+					<li>Magnum</li>
+				<ul>
+				</a>
+				<a class="close-overlay hidden">x</a>
+				</div>
+			</div>
+			
+			<div class="img">
+				<img src="http://mediad.publicbroadcasting.net/p/kuer/files/201510/squatters_ales_lager_logo.png"/>
+				<div class="overlay">
+				<a href="#" class="expand"><p>Squatters beeeeeersssssssss</p></a>
+				<a class="close-overlay hidden">x</a>
+				</div>
+			</div>
+			
+			<div class="img">
+				<img src="http://sterlinghillminingmuseum.org/visitor/images/Anniversary-Beer-Logo.png"/>
+				<div class="overlay">
+				<a href="#" class="expand"><p>Krogh's - Nice back baby</p></a>
+				<a class="close-overlay hidden">x</a>
+				</div>
+			</div>
+			
+			<div class="img">
+				<img src="http://www.chicagonow.com/the-beeronaut/files/2012/01/Point_logo.png"/>
+				<div class="overlay">
+				<a href="#" class="expand"><p>Point me a pint</p></a>
+				<a class="close-overlay hidden">x</a>
+				</div>
+			</div>
+		</div>	
+			
 		</div>
 		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
