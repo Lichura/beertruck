@@ -106,14 +106,21 @@ h1 {
 	.container-fluid img{
 	width: 15%;
 }
-
-	[class*="marca"] {
-	position: relative;
-	font-family: 'Roboto Slab', serif;
-	font-size: 1em;
-	color: white;
-	width: 100%;
-	margin: 5% 20% 0 20%;
+	
+	#Beers {
+		height: 450vh;
+	}
+	.effects .img{
+  	position: relative;
+  	float: left;
+  	width: 80%;
+  	height: 50vh;
+  	overflow: hidden;
+	}
+	
+	.effects {
+  		padding-left: 15%;
+  		margin-bottom: 5%;
 	}
 }
 
@@ -146,6 +153,31 @@ h1 {
 	width: 20%;
 	margin: 5% 5% 0 0;	
 	}
+	
+	.effects .img{
+  position: relative;
+  float: left;
+  margin-bottom: 10%;
+  margin-left: 4%;
+  margin-right: 4%;
+  width: 20%;
+  height: 40vh;
+  overflow: hidden;
+	}
+	
+	.effects {
+  padding-left: 10%;
+	}
+
+	.effects .img:nth-child(n) {
+  		margin-right: 5px;
+	}
+	.effects .img:first-child {
+  		margin-left: -15px;
+		}
+	.effects .img:last-child {
+ 		 margin-right: 0;
+		}
 }
 
 
@@ -450,28 +482,7 @@ input#img-6:checked ~ .nav-dots label#img-dot-6 {
 /* ============================================================
   GLOBAL
 ============================================================ */
-.effects {
-  padding-left: 10%;
-}
-.effects .img{
-  position: relative;
-  float: left;
-  margin-bottom: 10%;
-  margin-left: 4%;
-  margin-right: 4%;
-  width: 20%;
-  height: 40vh;
-  overflow: hidden;
-}
-.effects .img:nth-child(n) {
-  margin-right: 5px;
-}
-.effects .img:first-child {
-  margin-left: -15px;
-}
-.effects .img:last-child {
-  margin-right: 0;
-}
+
 .effects .img img {
   display: block;
   margin: 0;
