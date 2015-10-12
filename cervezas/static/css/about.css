@@ -1,0 +1,95 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:100);
+ 
+#About {
+  position: relative;
+  padding-left:0%;  
+}
+#About .persona:first-child {
+	position: absolute;
+  	margin-left: 0;
+		}
+#About .persona:nth-child(2) {
+	position: absolute;
+  	margin-left: 33%;
+	}
+	
+#About .persona:last-child{
+	     position: absolute;
+ 		 margin-left: 66%;
+		}
+
+#About .persona h1 {
+  position: absolute;
+  color: white;
+  margin-top: 4%;
+  margin-left: 33%;
+  font-size: 1em; 
+  font-weight: 100;
+  font-family: 'Work Sans', sans-serif;
+}
+
+#About .persona p {
+  display: block;
+  color: black;
+  margin-top: 100px;
+  width: 40%;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+  font-size: 0.8em;
+  text-align: center;
+}
+
+#About .persona.hover p{
+  position: absolute;
+  display: block;
+  color: white;  
+  width: 40%;
+  margin-top: 70px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 100;
+  font-size: 0.8em;
+  text-align: center;
+  transition: 0.9s;
+}
+
+
+
+
+#About .persona {
+  display: block;
+  position: absolute;
+  width: 33%;  
+  margin-top: 90px;
+  float: left;
+}
+
+#About .persona img {
+  border-radius: 50%;
+}
+
+#About .persona.hover{
+  position: absolute;
+  margin-top: 0;  
+  transition: all 0.9s;
+}
+#About .persona.hidden1{ 
+  position: absolute;
+  margin-top: 90px;
+  transition: all 0.5s; 
+}
+
+#About .persona hr{
+  position: absolute;
+  border: 0px solid white;
+  margin: 13% 0 0 0;
+}
+
+#About .persona.hover hr{
+  display: block;
+  width: 10%;
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  margin: 13% 0 0 40%;
+  transition: all 1s;
+}

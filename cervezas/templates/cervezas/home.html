@@ -6,7 +6,11 @@
 <head>
 	<meta charset='utf-8'/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet"  href="{% static "css/base1.css" %}" />
       <link rel="stylesheet"  href="{% static "css/home.css" %}" />
+      <link rel="stylesheet"  href="{% static "css/galeria.css" %}" />
+      <link rel="stylesheet"  href="{% static "css/cervezas.css" %}" />
+      <link rel="stylesheet"  href="{% static "css/about.css" %}" />
 	  
 	  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -31,14 +35,20 @@
 	});
 	
 
-        // handle the mouseenter functionality
+        // mouseenter para las marcas de cervezas
         $(".img").mouseenter(function(){
             $(this).addClass("hover");
         })
-        // handle the mouseleave functionality
+        //mouseleave para las marcas de cervezas
         .mouseleave(function(){
             $(this).removeClass("hover");
         });	
+        
+   $(".persona").mouseenter(function(){
+    $(this).removeClass("hidden1").addClass("hover");
+  }).mouseleave(function(){
+    $(this).removeClass("hover").addClass("hidden1");
+  });  
 });
 
 
@@ -60,10 +70,9 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="#Gallery">Home</a></li>
-				<li><a href="#About">About</a></li>
 				<li><a href="#Services">Services</a></li>
 				<li><a href="#Beers">Beers</a></li>
-				<li><a href="#Clientes">Clients</a></li>
+				<li><a href="#About">About Us</a></li>
 				<li><a href="#Contact">Contact Us</a></li>
 			  </ul>
 			</div>
@@ -143,38 +152,19 @@
   			</li>
 		</ul>		
 	</div>
-	<div class="section clearfix" id="Frase">
-		<h1>Un lugar donde la cerveza fluye como las mujeres</h1>
-	</div>
-	<div class="section clearfix" id="About">
-		<h1>Acerca de nosotros</h1>
-		<div class="row clearfix">
-		<div class="col-1-3 persona">
-			<h1>Ezequiel Parrilla</h1>
-			<img src="http://diferenciaentre.info/wp-content/uploads/2015/07/selfie.jpg" alt="Ezequiel Parrilla"/>
-			<p>Soy el parri, me gusta hacer cervezas y tambien me gusta liniers</p>
-		</div>
-		<div class="col-1-3 persona">
-			<h1>Cosme Fulanito</h1>
-			<img src="http://vignette3.wikia.nocookie.net/lossimpson/images/1/16/Guy_Incognito.png/revision/latest?cb=20100401233011&path-prefix=es" alt="Cosme Fulanito"/>
-			<p>Buenas noches señores. Molesto con una copilla por favorrr</p>
-		</div>
-		<div class="col-1-3 persona">
-			<h1>Mike Wazousky</h1>
-			<img src="http://img2.wikia.nocookie.net/__cb20131225010631/disney/images/1/1f/FMSTFIM15.png" alt="Mike wazousky"/>
-			<p>Soy tan romántico que a veces pienso que debería casarme conmigo mismo</p>
-		</div>
-		</div>
-		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
+	<div class="section frase">
+		<h1>Cuidemos el agua, tomemos cerveza.</h1>
 	</div>
   	<div class="section" id="Services"> 
   		<h1>servicios</h1>
   		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
   	</div>
+  	<div class="section frase">
+		<h1>Una buena cerveza se detecta al sorbo, pero es mejor asegurarse. </h1>
+	</div>
 	<div class="section" id="Beers">
 		<h1>Cervezas</h1>
-		<div id="effect-1" class="effects clearfix">
-		
+		<div id="effect-1" class="effects clearfix">		
 		<div class="row-1">
 			<div class="col-1-4 img">
 				<img src="http://www.presidiacreative.com/wp-content/uploads/2011/07/miller_01.jpg"/>
@@ -189,7 +179,7 @@
 					<li>Icehouse</li>
 					<li>Keystone Ice</li>
 					<li>Magnum</li>
-				<ul>
+				</ul>
 				</a>
 				<a class="close-overlay hidden">x</a>
 				</div>
@@ -206,7 +196,7 @@
 					<li>Barley Wine</li>
 					<li>Imperial Stout</li>
 					<li>Honey Beer</li>
-				<ul>
+				</ul>
 				</a>
 				<a class="close-overlay hidden">x</a>
 				</div>
@@ -229,7 +219,6 @@
 			</div>
 		</div>	
 		
-		
 		<div class="row-2">
 			<div class="img">
 				<img src="http://beerpulse.com/wp-content/uploads/2011/09/Amstel-Beer-Logo.png"/>
@@ -244,7 +233,7 @@
 					<li>Icehouse</li>
 					<li>Keystone Ice</li>
 					<li>Magnum</li>
-				<ul>
+				</ul>
 				</a>
 				<a class="close-overlay hidden">x</a>
 				</div>
@@ -274,11 +263,13 @@
 				</div>
 			</div>
 		</div>	
-			
 		</div>
 		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
-	<div class="section" id="Clientes">
+	<div class="section frase">
+		<h1>La cerveza es la mejor farmacia. Proverbio Alemán. </h1>
+	</div>
+	<!--<div class="section" id="Clientes">
 		<h1>Clientes</h1>
 		<div class="clientes">
 			<img class="img-cliente" src="http://www.publicidadeuskadi.com/wp-content/uploads/2013/03/rollingstonestonguelogo.jpg" alt=""/>
@@ -295,6 +286,33 @@
 			<img class="img-cliente" src="http://www.omicrono.com/wp-content/uploads/2014/04/Original_IBM_Logo.png" alt=""/>
 		</div>
 		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
+	</div>-->
+	<div class="section clearfix" id="About">
+		<h1>Acerca de nosotros</h1>
+		<div class="row clearfix">
+		<div class="col-1-3 persona">
+			<img src="http://diferenciaentre.info/wp-content/uploads/2015/07/selfie.jpg" alt="Ezequiel Parrilla"/>
+		    <h1>Ezequiel Parrilla</h1>
+		    <hr>
+			<p>Soy el parri, me gusta hacer cervezas y tambien me gusta liniers</p>
+		</div>
+		<div class="col-1-3 persona">
+			<img src="http://vignette3.wikia.nocookie.net/lossimpson/images/1/16/Guy_Incognito.png/revision/latest?cb=20100401233011&path-prefix=es" alt="Cosme Fulanito"/>
+			<h1>Cosme Fulanito</h1>
+			<hr>
+			<p>Buenas noches señores. Molesto con una copilla por favorrr</p>
+		</div>
+		<div class="col-1-3 persona">
+			<img src="http://img2.wikia.nocookie.net/__cb20131225010631/disney/images/1/1f/FMSTFIM15.png" alt="Mike wazousky"/>
+			<h1>Mike Wazousky</h1>
+			<hr>
+			<p>Soy tan romántico que a veces pienso que debería casarme conmigo mismo</p>
+		</div>
+		</div>
+		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
+	</div>
+	<div class="section frase">
+		<h1>TODO EL MUNDO TIENE QUE CREER EN ALGO….YO CREO QUE ME TOMARÉ OTRA CERVEZA.</h1>
 	</div>
 	<div class="section" id="Contact"> 
 		<h1> Contacto </h1>
@@ -312,7 +330,10 @@
 			<div class="col-1-3 footer-frase">
 				<h1>Para conocer mas sobre nosotros, no dudes en ingresar a nuestras redes sociales</h1>
 				<h1>Suscribite a Beertruck para recibir las novedades.</h1>
-				<input type="email" placeholder="Juan@correo.com"></input>
+				<div id="suscribe">
+					<input type="email" placeholder="Juan@correo.com"></input>
+					<button type="submit">OK</button>
+				</div>
 			</div>
 			<div class="col-1-3">
 				<ul>
