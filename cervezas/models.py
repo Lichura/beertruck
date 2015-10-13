@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from datetime import datetime
 
 # Create your models here.
 class Marcas(models.Model):
@@ -30,4 +31,15 @@ class Cervezas_stock(models.Model):
 	def __str__(self):
 		return self.tamanio
 	
+class Mails(models.Model):
+	nombre=models.CharField(max_length=100)
+	mail=models.CharField(max_length=150)
+	telefono=models.IntegerField()
+	comentario=models.CharField(max_length=1000)
+	fecha_hora=models.DateTimeField(blank=True, null=True)
+	
+	def publish(self):
+		self.fecha_hora = timezone.now()
+		self.save()
+
 	

@@ -11,9 +11,7 @@
 .row:last-child {
 	margin-bottom: 0;
 }
-[class*="col-"]{
-	padding: 10px;
-}
+
 
 /*-------Defino el responsive------------*/
 @media screen and (max-width: 960px){
@@ -77,6 +75,12 @@
     height: 50vh;
   }
   
+  	[class*="col-1-6"]{
+  		float: left;
+  		width: 16.66%;
+  		height: 40vh;
+  	}
+  
   	#Footer ul {
   		margin-left: 25%;
   	}
@@ -86,24 +90,19 @@
 	font-family: 'Roboto Slab', serif;
 	font-size: 1em;
 	color: white;
-	left: 5%;
 	width: 20%;
-	margin: 5% 5% 0 0;	
 	}
 	
 	.effects .img{
   position: relative;
   float: left;
-  margin-bottom: 10%;
-  margin-left: 4%;
-  margin-right: 4%;
   width: 20%;
   height: 40vh;
   overflow: hidden;
 	}
 	
 	.effects {
-  padding-left: 10%;
+  padding-left: 0;
 	}
 
 	.effects .img:nth-child(n) {
@@ -175,50 +174,7 @@
 
 
 
-/*----------Cervezas------------------*/
-.[class*="cervezas"] {
-	position: relative;
-	width: 100%
-	height: 50vh;
-	left: 0;
-	right: 0;
-	padding: 5% 0 10% 0;
-	margin-top: 3%;
-	}
-	
-	
-[class*="marca"] img{
-	margin: 0 -2% 0;
-	width: 100%;
-	height: 100%;
-}
 
-[class*="marca"] p {
-	width: 80%;
-	text-align: center;
-	font-size: 1em;
-}
-
-
-#segunda {
-	position: absolute;
-	top: 0;
-	left: 0;
-    display:none;  
-    width: 100%;
-    height:100%;
-    background-color: white;
-    opacity: 0.5;
-    z-index: 30; 
-}
-
-#segunda p{
-	color: black;
-	text-align: center;
-	font-size: 1em;
-	opacity: 1;
-	margin: 50% 0 0 0;
-}
 
 
 /*--------------------footer-------------------*/

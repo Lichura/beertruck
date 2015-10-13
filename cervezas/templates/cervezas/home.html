@@ -11,6 +11,7 @@
       <link rel="stylesheet"  href="{% static "css/galeria.css" %}" />
       <link rel="stylesheet"  href="{% static "css/cervezas.css" %}" />
       <link rel="stylesheet"  href="{% static "css/about.css" %}" />
+      <link rel="stylesheet"  href="{% static "css/services.css" %}" />
 	  
 	  <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 	  <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
@@ -50,6 +51,13 @@
     $(this).removeClass("hover").addClass("hidden1");
   });  
 });
+		$(function(){
+			$('.service').mousemove(function(e){
+				var amountMovedX = (e.pageX * -1 / 20);
+				var amountMovedY = (e.pageY * -1 / 20);
+				$(this).css('background-position', amountMovedX + 'px ' + amountMovedY + 'px');
+			});
+		})
 
 
 	</script>
@@ -70,10 +78,10 @@
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav">
 				<li class="active"><a href="#Gallery">Home</a></li>
-				<li><a href="#Services">Services</a></li>
-				<li><a href="#Beers">Beers</a></li>
-				<li><a href="#About">About Us</a></li>
-				<li><a href="#Contact">Contact Us</a></li>
+				<li><a href="#frase1">Services</a></li>
+				<li><a href="#frase2">Beers</a></li>
+				<li><a href="#frase3">About Us</a></li>
+				<li><a href="#frase4">Contact Us</a></li>
 			  </ul>
 			</div>
   		</div>
@@ -152,21 +160,61 @@
   			</li>
 		</ul>		
 	</div>
-	<div class="section frase">
+	<div class="section frase" id="frase1">
 		<h1>Cuidemos el agua, tomemos cerveza.</h1>
 	</div>
   	<div class="section" id="Services"> 
-  		<h1>servicios</h1>
+		<div class="col-1-3 service">
+			<div class="opacidad">
+				<h1>Quienes somos?</h1>
+				<p> THE CRAFTBEER TRUCK es un
+					PUB DE CERVEZAS ARTESANALES
+					que se traslada a donde quieras!.
+					Un autentico FESTIVAL CERVECERO
+					para Eventos Privados y Corporativos
+					que permite acercar una 
+					experiencia original y de vanguardia
+					a todos los invitados
+					THE CRAFTBEER TRUCK cuenta con 
+					capacidad para servir 2000 litros de 
+					cervezas rojas, negras y rubias de 
+					distintos estilos y variedades
+					Viví la experiencia, donde quieras y cuando quieras !</p>
+			</div>
+		</div>
+		<div class="col-1-3 service">
+			<div class="opacidad">		
+				<h1>Que hacemos?</h1>
+				<p>(explicaría como es el servicio, como nos contratan, 
+				que podes elegir las cervezas que queres tirar, 
+				que vamos a un evento privado y cobramos por litros o 
+				vamos aun evento y cobramos ticket en el lugar. etc. 
+				Que hay 6 opciones de cervezas...)</p>
+			</div>
+		</div>
+		<div class="col-1-3 service">
+			<div class="opacidad">
+			<h1>Nuestros servicios</h1>
+				<ul>
+					<li>Eventos Privados</li>
+					<li>Festivales</li>
+					<li>Alquiler del BT</li>
+					<li>Recitales</li>
+					<li>Eventos Corporativos</li>
+					<li>Campañas y acciones de marketing</li>
+				</ul>
+			</div>
+		</div>		
   		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
   	</div>
-  	<div class="section frase">
+  	<div class="section frase" id="frase2">
 		<h1>Una buena cerveza se detecta al sorbo, pero es mejor asegurarse. </h1>
 	</div>
 	<div class="section" id="Beers">
 		<h1>Cervezas</h1>
 		<div id="effect-1" class="effects clearfix">		
 		<div class="row-1">
-			<div class="col-1-4 img">
+			<div class="col-1-6 img">
 				<img src="http://www.presidiacreative.com/wp-content/uploads/2011/07/miller_01.jpg"/>
 				<div class="overlay">
 				<a href="#" class="expand">
@@ -185,7 +233,7 @@
 				</div>
 			</div>
 			
-			<div class="col-1-4 img">
+			<div class="col-1-6 img">
 				<img src="http://s3-media3.fl.yelpcdn.com/bphoto/G-8lrglzRaWPOpIc4KyFMQ/348s.jpg"/>
 				<div class="overlay">
 				<a href="#" class="expand">
@@ -202,7 +250,7 @@
 				</div>
 			</div>
 			
-			<div class="col-1-4 img">
+			<div class="col-1-6 img">
 				<img src="http://www.wolvesheadpizza.com/wp-content/uploads/2014/05/Heineken-Brand.png"/>
 				<div class="overlay">
 				<a href="#" class="expand"><p>Heineken papaaaaaaa</p></a>
@@ -210,7 +258,7 @@
 				</div>
 			</div>
 			
-			<div class="col-1-4 img">
+			<div class="col-1-6 img">
 				<img src="http://thecasualpint.com/old/images/logo.png"/>
 				<div class="overlay">
 				<a href="#" class="expand"><p>Otra cerveza mas con un logo que la rompee</p></a>
@@ -266,7 +314,7 @@
 		</div>
 		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
-	<div class="section frase">
+	<div class="section frase" id="frase3">
 		<h1>La cerveza es la mejor farmacia. Proverbio Alemán. </h1>
 	</div>
 	<!--<div class="section" id="Clientes">
@@ -290,19 +338,25 @@
 	<div class="section clearfix" id="About">
 		<h1>Acerca de nosotros</h1>
 		<div class="row clearfix">
-		<div class="col-1-3 persona">
+		<div class="col-1-4 persona">
 			<img src="http://diferenciaentre.info/wp-content/uploads/2015/07/selfie.jpg" alt="Ezequiel Parrilla"/>
 		    <h1>Ezequiel Parrilla</h1>
 		    <hr>
 			<p>Soy el parri, me gusta hacer cervezas y tambien me gusta liniers</p>
 		</div>
-		<div class="col-1-3 persona">
+		<div class="col-1-4 persona">
 			<img src="http://vignette3.wikia.nocookie.net/lossimpson/images/1/16/Guy_Incognito.png/revision/latest?cb=20100401233011&path-prefix=es" alt="Cosme Fulanito"/>
 			<h1>Cosme Fulanito</h1>
 			<hr>
 			<p>Buenas noches señores. Molesto con una copilla por favorrr</p>
 		</div>
-		<div class="col-1-3 persona">
+		<div class="col-1-4 persona">
+			<img src="http://img2.wikia.nocookie.net/__cb20131225010631/disney/images/1/1f/FMSTFIM15.png" alt="Mike wazousky"/>
+			<h1>Mike Wazousky</h1>
+			<hr>
+			<p>Soy tan romántico que a veces pienso que debería casarme conmigo mismo</p>
+		</div>
+		<div class="col-1-4 persona">
 			<img src="http://img2.wikia.nocookie.net/__cb20131225010631/disney/images/1/1f/FMSTFIM15.png" alt="Mike wazousky"/>
 			<h1>Mike Wazousky</h1>
 			<hr>
@@ -311,17 +365,25 @@
 		</div>
 		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
-	<div class="section frase">
+	<div class="section frase" id="frase4">
 		<h1>TODO EL MUNDO TIENE QUE CREER EN ALGO….YO CREO QUE ME TOMARÉ OTRA CERVEZA.</h1>
 	</div>
 	<div class="section" id="Contact"> 
 		<h1> Contacto </h1>
+		<form action="" method="post">
 		<input type="text" placeholder="Nombre"></input>
 		<input type="email" placeholder="Mail"></input>
 		<input type="textarea" placeholder="Comentarios"></input>
+		{% csrf_token %}
+    	{{ form }}
 		<button type="submit">enviar</button>
+		</form>
 		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
+	
 	</div>
+	
+
+	
 	<div class="section" id="Footer">
 		<div class="row clearfix">
 			<div class="col-1-3">

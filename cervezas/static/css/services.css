@@ -1,0 +1,185 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald);
+
+/* ============================================================
+  GLOBAL
+============================================================ */
+@media only screen and (min-width: 700px){
+#services{
+	height: 100vh;
+	width: 100%;
+}
+.service {
+	position: relative;
+	height: 100vh;
+	width: 50%;
+	float: left;
+	
+}
+.opacidad {
+	z-index: 30;
+	background: rgba(0,0,0,0.3);
+	height: 100vh;
+}
+.opacidad:hover {
+		background: rgba(0,0,0,0.0);
+}
+.service:nth-of-type(1){
+	background-image: url("http://i.imgur.com/B0niN.jpg");
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+}
+.service:nth-of-type(2){
+	background-image: url("http://basilstravels.com/wp-content/uploads/2014/06/P6212830.jpg");
+	background-size: cover;
+	height: 35vh;
+	
+}
+.service:nth-of-type(3){
+	background-image: url("http://farm8.static.flickr.com/7191/7063326143_b8ebdfc4d9.jpg");
+	background-size: cover;
+	height: 65vh;
+}
+
+.service p{
+	position: absolute;
+	width: 80%;
+	color: white;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400px;
+	font-size: 1em;
+}
+.service ul li:hover{
+	font-size: 1.1em;
+	color: #fb7e29;
+}
+
+.service h1{
+	position: absolute;
+	text-align: center;
+	color: white;
+	left: 50%;
+	transform: translate(-50%);
+	top:2%;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400px;
+	font-size: 2em;
+	border: 2px solid white;
+	border-collapse: separate;
+	border-spacing: 15px 15px;
+}
+
+.service:hover h1{
+	border: 2px solid white;
+	color: black;
+	background-color: white;
+	transition: 0.9s;
+}
+.service ul{
+	position: absolute;
+	width: 50%;
+	text-align: center;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.service li{
+	font-family: 'Oswald', sans-serif;
+	font-weight: 400px;
+	font-size: 1em;
+	color: white;
+}
+
+}
+
+/* ============================================================
+  smartPhone
+============================================================ */
+@media only screen and (max-width: 700px){
+
+	#services{
+	height: 300vh;
+	width: 100%;
+	}
+	
+	.row{
+		width: 100%;
+	}
+	.opacidad {
+	z-index: 30;
+	background: rgba(0,0,0,0.3);
+	height: 100vh;
+	}
+	
+	.service{
+		position: relative;
+		width: 100%;	
+	}
+	
+	.service:nth-of-type(1){
+	background-image: url("http://i.imgur.com/B0niN.jpg");
+	background-size: cover;
+	height: 100vh;
+	}
+	
+	.service:nth-of-type(2){
+		background-image: url("http://basilstravels.com/wp-content/uploads/2014/06/P6212830.jpg");
+		background-size: cover;
+		height: 100vh;	
+	}
+	.service:nth-of-type(3){
+		background-image: url("http://farm8.static.flickr.com/7191/7063326143_b8ebdfc4d9.jpg");
+		background-size: cover;
+		height: 100vh;
+	}
+	
+	.service h1{
+		position: absolute;
+		text-align: center;
+		color: white;
+		left: 50%;
+		transform: translate(-50%);
+		top:5%;
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400px;
+		font-size: 2em;
+		border: 2px solid white;
+		border-collapse: separate;
+
+	}
+	
+	.service p{
+		position: absolute;
+		width: 80%;
+		color: white;
+		text-align: center;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400px;
+		font-size: 1em;
+		}
+		
+	.service ul{
+		position: absolute;
+		width: 80%;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.service ul li{
+		font-family: 'Oswald', sans-serif;
+		font-weight: 400px;
+		text-align: center;
+		font-size: 1em;
+		color: white;
+		list-style-type: none;
+	}
+}

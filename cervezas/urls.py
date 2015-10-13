@@ -1,6 +1,8 @@
 from django.conf.urls import include,url 
 from . import views
 
-urlpatterns= [
+urlpatterns= patterns('', 
 	url(r'', views.home),
-]
+	url(r'^contact_form/$',views.contact_form),
+    url(r'^search/$', views.search),
+)
