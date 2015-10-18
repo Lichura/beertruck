@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin|Muli|Josefin+Sans);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 
 /* grid */
@@ -18,6 +19,7 @@
 	.frase h1{
 		color: black;
 		font-size: 2em;
+		font-family: 'Lobster', cursive;
 	} 
 
 	#About {
@@ -40,9 +42,7 @@
 	width: 15%;
 }
 	
-	#Beers {
-		height: 450vh;
-	}
+
 	.effects .img{
   	position: relative;
   	float: left;
@@ -61,7 +61,11 @@
 
 @media screen and (min-width: 960px) {
   /* make the columns responsive */
-  
+  	.frase h1{
+		color: black;
+		font-size: 2em;
+		font-family: 'Lobster', cursive;
+	} 
 
     [class*="col-1-3"]{
     float: left;
@@ -166,7 +170,7 @@
 	height: 5vh;
 	width: 40%;
 	text-align: center;
-	color: white;
+	color: black;
 	font-size: 1.5em;
 	margin: 0 30% 0 30%;
 	font-family: 'Roboto Slab', serif;
@@ -225,29 +229,30 @@
 }
 
 /*----------------nav------------------*/
-.nav {
-	background-color: black;
+nav {
+		background-color: rgba(0,0,0,0.1)
 }
 
-.container-fluid.scroll {
-	height: 5vh;
-	opacity: 0.3;
-}
 
 .container-fluid img{
 	position: fixed;
-	width: 10%;
+	width: 7%;
 	background: none;
 }
 .container-fluid{
-	height: 15vh;
-	background-color: black;
+	height: 8vh;
 	font-family: 'Roboto Slab', serif;
 }
 
-.container-fluid ul {
-	margin: 2% 0 0 25%;
+.container-fluid:hover{
+	background-color: rgba(0,0,0,1.0)
 }
+
+.container-fluid ul {
+	margin: 0 0 0 25%;
+	color: white;
+}
+
 
 
 

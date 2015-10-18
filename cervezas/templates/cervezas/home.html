@@ -37,7 +37,7 @@
 	
 
         // mouseenter para las marcas de cervezas
-        $(".img").mouseenter(function(){
+        $(".cerveza").mouseenter(function(){
             $(this).addClass("hover");
         })
         //mouseleave para las marcas de cervezas
@@ -59,11 +59,22 @@
 			});
 		});
 
-		$('#marcas ul li a').click(function(){
+
+		$('.mostrar-todo').toggle(function(){
+			$('#Beers').addClass('expandir');
+			}, function() {
+			$('#Beers').removeClass('expandir');
+			$('html, body').animate({
+        			scrollTop: $("#Beers").offset().top
+    		}, 2000);
+		});
+		
+		});
+		/*$('#marcas ul li a').click(function(){
 			$('#contenedor-cerveza').load('/static/css/cervezas.html #' + $(this).attr('href'));
 			return false;
 		});				
-	});
+	});*/
 
 
 	</script>
@@ -83,9 +94,9 @@
 			</div>
 			<div class="collapse navbar-collapse" id="myNavbar">
 			  <ul class="nav navbar-nav">
-				<li class="active"><a href="#Gallery">Home</a></li>
+				<li><a href="#Gallery">Home</a></li>
 				<li><a href="#frase1">Services</a></li>
-				<li><a href="#frase2">Beers</a></li>
+				<li><a href="#Beers">Beers</a></li>
 				<li><a href="#frase3">About Us</a></li>
 				<li><a href="#frase4">Contact Us</a></li>
 			  </ul>
@@ -217,40 +228,70 @@
 		<h1>Una buena cerveza se detecta al sorbo, pero es mejor asegurarse. </h1>
 	</div>
 	<div class="section" id="Beers">
-	<div id="marcas">
-		<ul>
-			<li><a href="cerveza1"><img src="http://mediad.publicbroadcasting.net/p/kuer/files/201510/squatters_ales_lager_logo.png"/></a></li>
-			<li><a href="cerveza2"><img src="http://sterlinghillminingmuseum.org/visitor/images/Anniversary-Beer-Logo.png"/></a></li>
-			<li><a href="cerveza3"><img src="http://www.chicagonow.com/the-beeronaut/files/2012/01/Point_logo.png"/></a></li>
-			<li><a href="cerveza4"><img src="http://www.thegrovecraftbeerfest.com/wp-content/uploads/2015/07/logo1.png"/></a></li>
-			<li><a href="cerveza5"><img src="http://onelincoln.net/wp-content/uploads/2015/04/craft_beer.png"/></a></li>
-			<li><a href="cerveza6"><img src="http://3.bp.blogspot.com/-AE8M-ui7dqU/UUNA1wm2wnI/AAAAAAAACuo/uiSC9dSuG9Y/s1600/BREW_LOGO.png"/></a></li>
-			<li><a href="cerveza7"><img src="http://www.thoughtsofajeanius.com/wp-content/uploads/2011/12/Guinness-Beer-logo.png"/></a></li>
-			<li><a href="cerveza8"><img src="http://www.countywidewholesale.co/images/distributor-logos/350px-Sapporo_beer_logo_2.svg.png"/></a></li>
-			<li><a href="cerveza9"><img src="http://www.korkedbats.com/wp-content/uploads/2014/09/Beer-Logo.png"/></a></li>
-			<li><a href="cerveza1"><img src="http://mediad.publicbroadcasting.net/p/kuer/files/201510/squatters_ales_lager_logo.png"/></a></li>
-			<li><a href="cerveza2"><img src="http://sterlinghillminingmuseum.org/visitor/images/Anniversary-Beer-Logo.png"/></a></li>
-			<li><a href="cerveza3"><img src="http://www.chicagonow.com/the-beeronaut/files/2012/01/Point_logo.png"/></a></li>
-			<li><a href="cerveza4"><img src="http://www.thegrovecraftbeerfest.com/wp-content/uploads/2015/07/logo1.png"/></a></li>
-			<li><a href="cerveza5"><img src="http://onelincoln.net/wp-content/uploads/2015/04/craft_beer.png"/></a></li>
-			<li><a href="cerveza6"><img src="http://3.bp.blogspot.com/-AE8M-ui7dqU/UUNA1wm2wnI/AAAAAAAACuo/uiSC9dSuG9Y/s1600/BREW_LOGO.png"/></a></li>
-			<li><a href="cerveza7"><img src="http://www.thoughtsofajeanius.com/wp-content/uploads/2011/12/Guinness-Beer-logo.png"/></a></li>
-			<li><a href="cerveza8"><img src="http://www.countywidewholesale.co/images/distributor-logos/350px-Sapporo_beer_logo_2.svg.png"/></a></li>
-			<li><a href="cerveza9"><img src="http://www.korkedbats.com/wp-content/uploads/2014/09/Beer-Logo.png"/></a></li>
-			<li><a href="cerveza1"><img src="http://mediad.publicbroadcasting.net/p/kuer/files/201510/squatters_ales_lager_logo.png"/></a></li>
-			<li><a href="cerveza2"><img src="http://sterlinghillminingmuseum.org/visitor/images/Anniversary-Beer-Logo.png"/></a></li>
-			<li><a href="cerveza3"><img src="http://www.chicagonow.com/the-beeronaut/files/2012/01/Point_logo.png"/></a></li>
-			<li><a href="cerveza4"><img src="http://www.thegrovecraftbeerfest.com/wp-content/uploads/2015/07/logo1.png"/></a></li>
-			<li><a href="cerveza5"><img src="http://onelincoln.net/wp-content/uploads/2015/04/craft_beer.png"/></a></li>
-			<li><a href="cerveza6"><img src="http://3.bp.blogspot.com/-AE8M-ui7dqU/UUNA1wm2wnI/AAAAAAAACuo/uiSC9dSuG9Y/s1600/BREW_LOGO.png"/></a></li>
-			<li><a href="cerveza7"><img src="http://www.thoughtsofajeanius.com/wp-content/uploads/2011/12/Guinness-Beer-logo.png"/></a></li>
-		</ul>
-		</ul>
-		</ul>
-	</div>
-	<div id="contenedor-cerveza">
-
-	</div>
+			<div class="cerveza">
+				<img src="http://mediad.publicbroadcasting.net/p/kuer/files/201510/squatters_ales_lager_logo.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">Heineken</a>
+				</div>	
+			</div>
+			<div class="cerveza">
+			<img src="http://sterlinghillminingmuseum.org/visitor/images/Anniversary-Beer-Logo.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">Heineken</a>
+				</div>			
+			</div>
+			<div class="cerveza">
+				<img src="http://www.chicagonow.com/the-beeronaut/files/2012/01/Point_logo.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">
+					<h1>Heineken</h1>
+					<ul>
+						<li>cerveza1</li>
+						<li>cerveza2</li>
+						<li>cerveza3</li>
+						<li>cerveza4</li>
+						<li>cerveza5</li>
+					</ul>
+					</a>
+				</div>				
+			</div>
+			<div class="cerveza">
+				<img src="http://www.thegrovecraftbeerfest.com/wp-content/uploads/2015/07/logo1.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">cerveza4</a>
+				</div>				
+			</div>
+			<div class="cerveza">
+			<img src="http://onelincoln.net/wp-content/uploads/2015/04/craft_beer.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">Heineken</a>
+				</div>	
+			</div>
+			<div class="cerveza">
+				<img src="http://3.bp.blogspot.com/-AE8M-ui7dqU/UUNA1wm2wnI/AAAAAAAACuo/uiSC9dSuG9Y/s1600/BREW_LOGO.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">Heineken</a>
+				</div>	
+			</div>
+			<div class="cerveza">
+				<img src="http://www.thoughtsofajeanius.com/wp-content/uploads/2011/12/Guinness-Beer-logo.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">Heineken</a>
+				</div>				
+			</div>
+			<div class="cerveza">
+				<img src="http://www.countywidewholesale.co/images/distributor-logos/350px-Sapporo_beer_logo_2.svg.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">Heineken</a>
+				</div>					
+			</div>
+			<div class="cerveza">
+				<img src="http://www.korkedbats.com/wp-content/uploads/2014/09/Beer-Logo.png"/>
+				<div class="img-on-top">
+					<a class="img-expand" href="#">Heineken</a>
+				</div>				
+			</div>
+		<div class="mostrar-todo"><span>Mostrar todo</span></div>
 	</div>
 	<div class="section frase" id="frase3">
 		<h1>La cerveza es la mejor farmacia. Proverbio Alemán. </h1>
@@ -304,7 +345,7 @@
 		<a href="#Gallery"><i class="fa fa-chevron-up fa-2x"></i></a>
 	</div>
 	<div class="section frase" id="frase4">
-		<h1>TODO EL MUNDO TIENE QUE CREER EN ALGO….YO CREO QUE ME TOMARÉ OTRA CERVEZA.</h1>
+		<h1>Todo el mundo tiene que creer en algo... Yo creo que me tomaré otra cerveza</h1>
 	</div>
 	<div class="section" id="Contact"> 
 		<h1> Contacto </h1>

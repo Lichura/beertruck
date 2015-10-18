@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 /* ============================================================
   GLOBAL
@@ -65,8 +66,7 @@
 	left: 50%;
 	transform: translate(-50%);
 	top:2%;
-	font-family: 'Oswald', sans-serif;
-	font-weight: 400px;
+	font-family: 'Lobster', cursive;
 	font-size: 2em;
 	border: 2px solid white;
 	border-collapse: separate;

@@ -25,7 +25,7 @@
 
 #About .persona h1 {
   position: absolute;
-  color: white;
+  color: black;
   margin-top: 4%;
   margin-left: 12.5%;
   font-size: 1em; 
@@ -35,7 +35,7 @@
 
 #About .persona p {
   display: block;
-  color: black;
+  color: white;
   margin-left: 4%;
   margin-top: 7%;
   width: 40%;
@@ -48,7 +48,7 @@
 #About .persona.hover p{
   position: absolute;
   display: block;
-  color: white;  
+  color: black;  
   width: 40%;
   margin-top: 2%;
   font-family: 'Work Sans', sans-serif;
@@ -86,7 +86,7 @@
 #About .persona hr{
   position: relative;
   width: 0;
-  border: 0px solid white;
+  border: 0px solid black;
   margin: 12% 0 0 0;
 }
 
@@ -94,7 +94,7 @@
   display: block;
   width: 10%;
   height: 1px;
-  background-color: white;
+  background-color: black;
   position: relative;
   margin: 12% 0 0 20%;
   transition: all 1s;
@@ -135,7 +135,7 @@
 	
 	#About .persona p{
 		width: 90%;
-		color: white;
+		color: black;
 		left: 10%;
 		right: 10%;
 		margin-left: 10%;

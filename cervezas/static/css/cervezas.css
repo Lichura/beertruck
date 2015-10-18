@@ -1,168 +1,182 @@
 @import url(https://fonts.googleapis.com/css?family=Cabin|Muli|Josefin+Sans);
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 @import url(https://fonts.googleapis.com/css?family=Work+Sans:100);
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 
 
+/*----------Cervezas compartido------------------*/
 
-/*----------Cervezas------------------*/
-@media screen and (min-width: 700px){
+
+/* Boton para mostrar toda la pagina */
+	.mostrar-todo  {
+  	width: 15%;
+  	height: 40px;
+  	position: absolute;
+  	color: #000000;
+  	bottom: 1%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	border: 2px solid #000000;
+	}
 	
+	.mostrar-todo:hover{
+		background-color: #000000;
+		color: #fff;
+	}
+	
+	.mostrar-todo span{
+		position: absolute;
+		text-align: center;
+		left: 10%;
+		font-family: 'Lobster', cursive;
+		font-size: 2em;
+	}
+	
+		
 	#Beers{
 		position: relative;
-		background-color: black;
-	}
-	#marcas {
-		position: absolute;
-		left: 0;
-		width: 50%;
-		height: 100vh;
-	}
-
-	#marcas ul{
-		width: 100%;
-		height: 100vh;
-		padding: 0;
-		margin: 0;
-	}
-	#marcas ul li{
-		list-style-type: none;
-		width: 20%;
-		height: 20%;
-		float: left;
+		background-color: white;
 	}
 	
-	#marcas ul li a img{
+	.cerveza {
+		position: relative;
+		float: left;
+		overflow: hidden;
+		
+		-webkit-box-shadow: 0px 20px 24px -10px rgba(0,0,0,0.34);
+		-moz-box-shadow: 0px 20px 24px -10px rgba(0,0,0,0.34);
+		box-shadow: 0px 24px 24px -10px rgba(0,0,0,0.34);
+	}
+
+/*--------------------------------------
+			Pantalla grande
+----------------------------------------*/
+@media screen and (min-width: 700px){
+	
+	
+	#Beers.expandir{
+		height: 300vh;
+	}
+	.cerveza {
+		width: 20%;
+		height: 35vh;
+		margin: 15vh 0 0 4%;
+	}
+
+	.cerveza img{
+		left: 50%;
+		display: block;
 		width: 100%;
 		height: 100%;
-		opacity: 0.5;
+		margin: 0;
+		padding: 0;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
 	}
 	
-	#marcas ul li a img:hover{
-		opacity: 1;
-	}
-		
-	#marcas ul li a img:active{
-		opacity: 1;
-	}
-	
-		
-	#contenedor-cerveza{
-		background-color: #080808;
+	.img-on-top{
+		display: block;
 		position: absolute;
-		right: 0;
-		width: 50%;
-		height: 100vh;
+		z-index: 20;
+		background: rgba(50,50,50,0.8);
+		overflow: hidden;
+		transition: all 0.5s;
+			}
+			
+	.img-expand{
+		display: block;
+		position: absolute;
+		z-index: 100;
+		margin-left: 50%;
+		margin-top: 50%;
+		width: 0%;
+		height: 0%;
+		border: solid 5px #FFFFFF;
+		text-align: center;
+		color: #fff;
+		line-height: 15px;
+		font-weight: 700;
+		font-size: 15px;
+		border-radius: 30px;
+	}
+	
+	.img-on-top h1{
 		color: white;
-		font-family: 'Work Sans', sans-serif;
-		overflow: scroll;
+		font-size: 1.2em;
 	}
 	
-	#contenedor-cerveza h1{
-		font-size: 2.5em; 
-  		font-weight: 700;
+	.img-on-top a{
+		text-decoration: none;
 	}
 	
-	#contenedor-cerveza h2{
-		margin-left: 10%;
-		font-size: 2em; 
-  		font-weight: 500;
+	.img-on-top a:hover{
+		color: white;
 	}
 	
-	#contenedor-cerveza p{
-		margin-left: 10%;
-		font-size: 1.5em; 
-  		font-weight: 300;
+	.img-expand ul li{
+		list-style-type: none;
+		text-align: center;
+		left: -25%;
+	}
+
+	.img-on-top{
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		opacity: 0;
 	}
 	
-	
-	
-	
-	
-	.effects .img img {
-  		display: block;
-  		width: 100%;
-  		height: 30vh;
+	.cerveza.hover .img-on-top{
+		opacity: 1;
 	}
+	
+	.cerveza.hover .img-expand{
+		margin: 0 0 0 0;
+		border-radius: 0;
+		width: 100%;
+		height: 100%;
+		transition: 1s;
+	}
+	
+
 }	
 
+/*--------------------------------------
+			Pantalla chica
+----------------------------------------*/
+
 @media screen and (max-width: 700px){
-	#Beers .img{
+	#Beers {
+		padding-top: 5vh;
+		height: 250vh;
+	}
+	.cerveza {
+		width: 90%;
+		height: 50vh;
+		margin: 0 5% 10vh 5%;
+	}
+	
+	.cerveza img{
+		display: block;
 		width: 100%;
-		height: 40vh;
+		height: 100%;
+		-webkit-filter: grayscale(100%);
+		filter: grayscale(100%);
 	}
 
-	.effects .img img {
-  		display: block;
-  		width: 100%;
-  		height: 40vh;
+	.mostrar-todo  {
+  	width: 50%;
+  	height: 40px;
+  	position: absolute;
+  	color: #000000;
+  	bottom: 1%;
+  	left: 55%;
+  	transform: translate(-50%, -40%);
+  	border: 2px solid #000000;
 	}
 }
 
-/* ============================================================
-  GLOBAL
-============================================================ */
 
 
 
-/*.overlay {
-  display: block;
-  position: absolute;
-  z-index: 20;
-  background: rgba(67, 62, 61, 0.8);
-  overflow: hidden;
-  transition: all 0.5s;
-
-}
-
-
-
-a.expand {
-  width: 80%;
-  display: block;
-  position: absolute;
-  z-index: 100;
-  top: 3%;
-  text-align: left;
-  font-family: 'Roboto Slab', serif;
-  color: white;
-  font-weight: 50;
-  font-size: 1em;
-  text-decoration: none;
-  
-}
-
-a.expand ul {
-  padding-left: 30px;
-}
-
-a.expand:hover{
-	  text-decoration: none;
-	  color: white;
-}*/
-
-/* ============================================================
-  EFFECT 1 - SLIDE IN BOTTOM
-============================================================ */
-#effect-1 .overlay {
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 0;
-}
-#effect-1 .overlay a.expand {
-  left: 0;
-  right: 0;
-  bottom: 50%;
-  margin: 0 auto -30px auto;
-}
-#effect-1 .img.hover .overlay {
-  height: 100%;
-  border: 3px solid white;
-}
-
-#effect-1 .img.hover img {
-  -webkit-filter: blur(5px);
-  filter: blur(5px);
-  transition: all 0.5s;
-}
