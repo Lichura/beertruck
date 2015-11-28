@@ -4,10 +4,7 @@
 
 
 /* grid */
-.row {
-	margin: 0 -10px;
-	margin-bottom: 20px;
-}
+
 
 .row:last-child {
 	margin-bottom: 0;
@@ -16,6 +13,12 @@
 
 /*-------Defino el responsive------------*/
 @media screen and (max-width: 960px){
+
+	.row {
+    margin-right: 0;
+    margin-left: 0;
+}
+    }
 	.frase h1{
 		color: black;
 		font-size: 2em;
@@ -55,6 +58,15 @@
   		padding-left: 15%;
   		margin-bottom: 5%;
 	}
+	
+	#Contact input {
+	margin: 0 10% 2% 10%;
+	width: 80%;
+	}
+	
+	h1{
+		font-size: 2em;
+	}
 }
 
 
@@ -66,6 +78,11 @@
 		font-size: 2em;
 		font-family: 'Lobster', cursive;
 	} 
+	
+	.row {
+	margin: 0 -10px;
+	margin-bottom: 20px;
+	}
 
     [class*="col-1-3"]{
     float: left;
@@ -118,6 +135,12 @@
 	.effects .img:last-child {
  		 margin-right: 0;
 		}
+		
+	#Contact input {
+	margin: 0 30% 2% 30%;
+	width: 40%;
+	}
+
 }
 
 
@@ -144,16 +167,16 @@
 	border: 2px solid black;
 }
 
-#Contact input {
+
+
+	#Contact input {
 	display: block;
-	margin: 0 30% 2% 30%;
 	height: 5vh;
-	width: 40%;
 	font-family: 'Roboto Slab', serif;
 	font-size: 1em;
 	color: black;
 	text-align: center;	 
-}
+	}
 
 #Contact input[type="textarea"]{
 	height: 10vh;
@@ -194,6 +217,8 @@
 	width: 100%;
 	height: 10vh;
 	margin-top: 15%;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 #suscribe input{
 	display: block;
