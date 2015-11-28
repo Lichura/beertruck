@@ -2,6 +2,11 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700);
 
 /*-----------------slider--------------*/
+#Gallery {
+	height:100vh;
+}
+
+
 .slides {
   padding: 0;
   width: 100%;

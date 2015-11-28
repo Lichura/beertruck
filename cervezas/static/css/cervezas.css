@@ -6,14 +6,13 @@
 
 /*----------Cervezas compartido------------------*/
 
-
 /* Boton para mostrar toda la pagina */
 	.mostrar-todo  {
   	width: 15%;
   	height: 40px;
-  	position: absolute;
+  	position: relative;
   	color: #000000;
-  	bottom: 1%;
+  	margin-top: 99%;
   	left: 50%;
   	transform: translate(-50%, -50%);
   	border: 2px solid #000000;
@@ -33,10 +32,7 @@
 	}
 	
 		
-	#Beers{
-		position: relative;
-		background-color: white;
-	}
+
 	
 	.cerveza {
 		position: relative;
@@ -48,33 +44,14 @@
 		box-shadow: 0px 24px 24px -10px rgba(0,0,0,0.34);
 	}
 
-/*--------------------------------------
-			Pantalla grande
-----------------------------------------*/
-@media screen and (min-width: 700px){
-	
-	
-	#Beers.expandir{
-		height: 300vh;
-	}
-	.cerveza {
-		width: 20%;
-		height: 35vh;
-		margin: 15vh 0 0 4%;
-	}
-
 	.cerveza img{
-		left: 50%;
 		display: block;
 		width: 100%;
 		height: 100%;
-		margin: 0;
-		padding: 0;
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
 	}
 	
-	.img-on-top{
+	
+		.img-on-top{
 		display: block;
 		position: absolute;
 		z-index: 20;
@@ -138,10 +115,49 @@
 		height: 100%;
 		transition: 1s;
 	}
+/*--------------------------------------
+			Pantalla grande
+----------------------------------------*/
+@media screen 
+  and (min-width: 1000px) 
+ { 
+	
+	#Beers.expandir{
+		height: 300%;
+	}
+	.cerveza {
+		width: 20%;
+		height: 35vh;
+		margin: 15vh 0 0 4%;
+	}
+
+	.cerveza img{
+		left: 50%;
+		display: block;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	
+
 	
 
 }	
 
+/*---------------------
+	Pantalla de notebook
+---------------------*/
+
+@media screen   
+	and (min-width: 700px) 
+  	and (max-width: 1000px) {
+	.cerveza {
+		width: 30%;
+		height: 40vh;
+		margin: 15vh 0 0 2%;
+	}
+}
 /*--------------------------------------
 			Pantalla chica
 ----------------------------------------*/
@@ -157,20 +173,13 @@
 		margin: 0 5% 10vh 5%;
 	}
 	
-	.cerveza img{
-		display: block;
-		width: 100%;
-		height: 100%;
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
-	}
+
 
 	.mostrar-todo  {
   	width: 50%;
   	height: 40px;
   	position: absolute;
   	color: #000000;
-  	bottom: 1%;
   	left: 55%;
   	transform: translate(-50%, -40%);
   	border: 2px solid #000000;

@@ -19,7 +19,7 @@
 .opacidad {
 	z-index: 30;
 	background: rgba(0,0,0,0.3);
-	height: 100vh;
+	height: 100%;
 }
 .opacidad:hover {
 		background: rgba(0,0,0,0.0);
