@@ -37,17 +37,9 @@ def contact(request):
 		if not request.POST.get('Comentario', ''):
 			errors.append('Por favor complete la sección de comentarios.')
 		if not errors:
-			#msg_html = render_to_string('cervezas/email.html', {'nombre': request.POST['Nombre']})
-			#message1 = (
-			#	request.POST['Nombre'],
-			#	request.POST['Comentario'],
-			#	request.POST['email'], 
-			#	['prueba@thecraftbeertruck.com.ar']
-			#)
-			#destinatarios.append(request.POST['email'])
 			nombre = request.POST['Nombre']
-			subject, from_email, to = 'hello', 'prueba@thecraftbeertruck.com.ar',request.POST['email']
-			text_content = 'This is an important message.'
+			subject, from_email, to = 'The Craft Beer Truck', 'prueba@thecraftbeertruck.com.ar',request.POST['email']
+			text_content = 'The Craft Beer Truck'
 			html_content = render_to_string(template_html, {"nombre": nombre})
 			msg = EmailMultiAlternatives(subject, text_content, from_email, [to])
 			msg.attach_alternative(html_content, "text/html")
