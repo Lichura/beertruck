@@ -38,7 +38,7 @@
 	}
 	
 	#Footer {
-		height: 100vh;
+		height: 30vh;
 	}
 	
 	.container-fluid img{
@@ -59,10 +59,7 @@
   		margin-bottom: 5%;
 	}
 	
-	#Contact input {
-	margin: 0 10% 2% 10%;
-	width: 80%;
-	}
+
 	
 	h1{
 		font-size: 2em;
@@ -135,40 +132,59 @@
 	.effects .img:last-child {
  		 margin-right: 0;
 		}
+
+
+}
+
+
+
+/*   Seccion de contacto   */
+#Contact p{
+	color: red;
+	font-size: 0.8em;
+	margin-left: 65%;
+	-webkit-transform: translate(-65%);
+}
+/* vista grande */
+@media screen and (min-width: 960px){
 		
 	#Contact input {
-	margin: 0 30% 2% 30%;
-	width: 40%;
+	margin: 0 35% 2% 35%;
+	width: 30%;
+	display: block;
+	height: 5vh;
+	font-family: 'Roboto Slab', serif;
+	font-size: 1em;
+	color: black;
+	text-align: center;	 
+	}
+	
+	#Contact input[type="textarea"]{
+		height: 15vh;
 	}
 
-}
+	#Contact input:focus {
+		border: solid 2px orange;
+	}
 
-
-
-
-/*------------Clientes----------------*/
-
-.clientes {
-	position: absolute;
-	width: 100%;
-	height: 60vh;
-}
-.img-cliente {
-	position: relative;
-	border-radius: 10%;
+	#Contact button {
+	display: block;
 	background: none;
-	width: 60px;
-	height: 60px;
-	margin-left: auto;
-	margin-right: auto;
-	float: none;
-	display: inline-block;
-	margin: 5%;
-	border: 2px solid black;
+	border: none;
+	height: 5vh;
+	width: 30%;
+	text-align: center;
+	color: black;
+	font-size: 1.5em;
+	margin: 0 35% 0 35%;
+	font-family: 'Roboto Slab', serif;
+	}
 }
 
+/* vista chica */
 
 
+@media screen and (max-width: 960px){
 	#Contact input {
 	display: block;
 	height: 5vh;
@@ -178,15 +194,15 @@
 	text-align: center;	 
 	}
 
-#Contact input[type="textarea"]{
-	height: 10vh;
-}
+	#Contact input[type="textarea"]{
+		height: 10vh;
+	}
 
-#Contact input:focus {
-	border: solid 2px orange;
-}
+	#Contact input:focus {
+		border: solid 2px orange;
+	}
 
-#Contact button {
+	#Contact button {
 	display: block;
 	background: none;
 	border: none;
@@ -197,14 +213,18 @@
 	font-size: 1.5em;
 	margin: 0 30% 0 30%;
 	font-family: 'Roboto Slab', serif;
+	}
 }
 
 
 
 
 
-
 /*--------------------footer-------------------*/
+
+/*----------------------------------------------
+					general
+-----------------------------------------------*/
 #Footer h1 {
 	text-align: center;
 	color: black;
@@ -214,11 +234,7 @@
 
 #suscribe{
 	position: relative;
-	width: 100%;
 	height: 10vh;
-	margin-top: 15%;
-	padding-left: 5px;
-	padding-right: 5px;
 }
 #suscribe input{
 	display: block;
@@ -249,8 +265,48 @@
 }
 
 #footer-logo {
-	width: 80%;
-	margin: 0 0 0 10%;
+	width: 250px;
+	margin: 0 0 0 5%;
+}
+
+
+/*----------------------------------------------
+			footer pantalla grande
+-----------------------------------------------*/
+@media screen and (min-width: 960px){
+	#suscribe{
+		width: 40%;
+		display: block;
+		margin-left: 400px;
+		position: absolute;
+	}
+	#footer-logo{
+		float: left;
+		margin-top: -5%;
+		
+	}
+	
+	#Footer h1{
+		position: relative;
+		margin-right: 250px;
+	}
+	
+	#Footer ul{
+	position: absolute;
+	margin-left: 1000px;
+	}
+	
+}
+/*----------------------------------------------
+			footer pantalla chica
+-----------------------------------------------*/
+@media screen and (max-width: 960px){
+	#suscribe{
+	width: 100%;
+	margin-top: 15%;
+	padding-left: 5px;
+	padding-right: 5px;
+	}
 }
 
 /*----------------nav------------------*/

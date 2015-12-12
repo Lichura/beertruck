@@ -33,13 +33,13 @@
 .service:nth-of-type(2){
 	background-image: url("http://basilstravels.com/wp-content/uploads/2014/06/P6212830.jpg");
 	background-size: cover;
-	height: 35vh;
+	height: 62vh;
 	
 }
 .service:nth-of-type(3){
 	background-image: url("http://farm8.static.flickr.com/7191/7063326143_b8ebdfc4d9.jpg");
 	background-size: cover;
-	height: 65vh;
+	height: 38vh;
 }
 
 .service p{
@@ -83,7 +83,7 @@
 	position: absolute;
 	width: 50%;
 	text-align: center;
-	left: 50%;
+	left: 47%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 }
@@ -93,6 +93,7 @@
 	font-weight: 400px;
 	font-size: 1em;
 	color: white;
+    list-style-type: none;
 }
 
 }
