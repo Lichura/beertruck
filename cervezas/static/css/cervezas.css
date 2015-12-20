@@ -32,7 +32,9 @@
 	}
 	
 		
-
+	#Beers{
+	height: 100vh;
+	}
 	
 	.cerveza {
 		position: relative;
@@ -127,7 +129,7 @@
 	}
 	.cerveza {
 		width: 200px;
-		height: 35vh;
+		height: 200px;
 		margin: 15vh 0 0 4%;
 	}
 
